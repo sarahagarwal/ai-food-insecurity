@@ -28,7 +28,7 @@
   },
   {
     "id": "19079-PART-02",
-    "name": "Children of Mine : Children of Mine",
+    "name": "Children of Mine",
     "address": "gloria ward-ravenell 2263 mount view place, se washington DC 20020",
     "phone": "(202) 374-6029",
     "region": "DC Ward 8",
@@ -51,7 +51,7 @@
   },
   {
     "id": "14265-PART-01",
-    "name": "St. Martins Social Service : St. Martins Social Service",
+    "name": "St. Martins Social Service",
     "address": "Attn: St. Martin's Social Service 1908 North Capitol Street NW Washington DC 20002",
     "phone": "(202) 232-1144",
     "region": "DC Ward 5",
@@ -74,7 +74,7 @@
   },
   {
     "id": "18786-PART-01",
-    "name": "Bethesda Cares : Bethesda Cares",
+    "name": "Bethesda Cares",
     "address": "Attn: Bethesda Cares 5033 Wilson Lane Bethesda MD 20814",
     "phone": "(301) 907-9244",
     "region": "MD Montgomery County",
@@ -101,7 +101,7 @@
   },
   {
     "id": "19656-PART-01",
-    "name": "Brookland Senior Day Care Center, Inc. : Brookland Senior Day Care Center, Inc.",
+    "name": "Brookland Senior Day Care Center, Inc.",
     "address": "Attn: Brookland Senior Day Care Center, Inc. 6210 Chillum Place NW Washington DC 20011",
     "phone": "(302) 538-0813",
     "region": "DC Ward 4",
@@ -126,7 +126,7 @@
   },
   {
     "id": "19753-PART-01",
-    "name": "City of David Ministries : City of David Ministries",
+    "name": "City of David Ministries",
     "address": "Attn: City of David Ministries 2900 Boones Lane District Heights MD 20747",
     "phone": "(301) 200-2489",
     "region": "MD Prince George's County",
@@ -156,7 +156,7 @@
   },
   {
     "id": "16185-PART-01",
-    "name": "City of Greenbelt Food Pantry : City of Greenbelt Food Pantry",
+    "name": "City of Greenbelt Food Pantry",
     "address": "Attn: City of Greenbelt Food Pantry 25 Crescent Rd Greenbelt MD 20770",
     "phone": "(240) 542-2012",
     "region": "MD Prince George's County",
@@ -222,7 +222,7 @@
   },
   {
     "id": "19846-PART-01",
-    "name": "Hope Presbyterian Church : Hope Presbyterian Church",
+    "name": "Hope Presbyterian Church",
     "address": "Attn: Hope Presbyterian Church 1100 Enterprise Road Mitchellville MD 20721",
     "phone": "(240) 678-7667",
     "region": "MD Prince George's County",
@@ -276,7 +276,7 @@
   },
   {
     "id": "19755-PART-01",
-    "name": "Mission of Love Charities, Inc. : Mission of Love Charities, Inc.",
+    "name": "Mission of Love Charities, Inc.",
     "address": "Attn: Mission of Love Charities, Inc. 6180 Central Avenue Capitol Heights MD 20743",
     "phone": "(301) 333-4440",
     "region": "MD Prince George's County",
@@ -307,7 +307,7 @@
   },
   {
     "id": "19472-PART-01",
-    "name": "Montgomery County Family Center : Montgomery County Family Center",
+    "name": "Montgomery County Family Center",
     "address": "Attn: Montgomery County Family Center 12247 Georgia Ave. Silver Spring MD 20902",
     "phone": "(301) 942-1790",
     "region": "MD Montgomery County",
@@ -385,7 +385,7 @@
   },
   {
     "id": "22183-PART-01",
-    "name": "The ARK of DC Foundation : The ARK of DC Foundation",
+    "name": "The ARK of DC Foundation",
     "address": "Attn: The ARK of DC Foundation 1818 New York Ave. NE Washington DC 20002",
     "phone": "(771) 210-9962",
     "region": "DC Ward 5",
@@ -458,7 +458,7 @@
   },
   {
     "id": "19515-PART-01",
-    "name": "Faith Tabernacle of Prayer : Faith Tabernacle of Prayer",
+    "name": "Faith Tabernacle of Prayer",
     "address": "Attn: Faith Tabernacle of Prayer 2465 Alabama Ave SE Washington DC 20020",
     "phone": "(202) 678-6012",
     "region": "DC Ward 8",
@@ -483,7 +483,7 @@
   },
   {
     "id": "22570-PART-01",
-    "name": "Code 3 Association : Code 3 Association",
+    "name": "Code 3 Association",
     "address": "Attn: Code 3 Association 2929 Graham Road Falls Church VA 22042",
     "phone": "(703) 400-2118",
     "region": "VA Falls Church City",
@@ -538,7 +538,7 @@
   },
   {
     "id": "21989-PART-01",
-    "name": "The Gourmet Angel Food Bank : The Gourmet Angel Food Bank",
+    "name": "The Gourmet Angel Food Bank",
     "address": "Mount Jezreel Baptist Church 317 N Payne Street Alexandria VA 22314",
     "phone": "(469) 237-7858",
     "region": "VA City of Alexandria",
@@ -561,7 +561,7 @@
   },
   {
     "id": "14065-PART-01",
-    "name": "Lorton Community Action Center : Lorton Community Action Center",
+    "name": "Lorton Community Action Center",
     "address": "Attn: Lorton Community Action Center 9520 Richmond Hwy door A3 Lorton VA 22079",
     "phone": "(703) 339-5161",
     "region": "VA Fairfax County",
@@ -706,7 +706,7 @@
   },
   {
     "id": "14665-PART-01",
-    "name": "Brighter Day Ministries Food Pantry : Brighter Day Ministries Food Pantry",
+    "name": "Brighter Day Ministries Food Pantry",
     "address": "Brighter Day Ministries Food Pantry 3209 5th Street SE Washington DC 20032",
     "phone": "(301) 806-4305",
     "region": "DC Ward 8",
@@ -850,7 +850,7 @@
   },
   {
     "id": "14910-PART-01",
-    "name": "Mary House : Mary House",
+    "name": "Mary House",
     "address": "Mary House 4303 13th st NE Washington DC 20017",
     "phone": "(202) 635-9025",
     "region": "DC Ward 5",
@@ -885,7 +885,7 @@
   },
   {
     "id": "15285-PART-01",
-    "name": "Columbia Baptist Church : Columbia Baptist Church",
+    "name": "Columbia Baptist Church",
     "address": "Attn: Columbia Baptist Church 3245 Glen Carlyn Rd. Falls Church VA 22041",
     "phone": "(571) 422-2075",
     "region": "VA Fairfax County",
@@ -1000,7 +1000,7 @@
   },
   {
     "id": "15922-PART-01",
-    "name": "Mount Moriah Baptist Church : Mount Moriah Baptist Church",
+    "name": "Mount Moriah Baptist Church",
     "address": "Attn: Mount Moriah Baptist Church 1636 East Capital St NE Washington DC 20001",
     "phone": "(410) 271-5656",
     "region": "DC Ward 7",
@@ -1063,7 +1063,7 @@
   },
   {
     "id": "18015-PART-01",
-    "name": "Bethlehem Baptist Church : Bethlehem Baptist Church",
+    "name": "Bethlehem Baptist Church",
     "address": "Attn: Bethlehem Baptist Church 7836 Fordson Road Alexandria VA 22306",
     "phone": "(703) 867-6049",
     "region": "VA Fairfax County",
@@ -1094,7 +1094,7 @@
   },
   {
     "id": "18714-PART-01",
-    "name": "St. Joseph Catholic Church : St. Joseph Catholic Church",
+    "name": "St. Joseph Catholic Church",
     "address": "Attn: St. Joseph Catholic Church 2020 St Joseph Drive  Largo MD 20774",
     "phone": "(301) 773-0102",
     "region": "MD Prince George's County",
@@ -1160,7 +1160,7 @@
   },
   {
     "id": "19047-PART-01",
-    "name": "Church of the Incarnation, St. Vincent De Paul Society : Church of the Incarnation, St. Vincent De Paul Society",
+    "name": "Church of the Incarnation, St. Vincent De Paul Society",
     "address": "Attn: Church of the Incarnation, St. Vincent De Paul Society 880 Eastern Ave  NE Washington DC 20019",
     "phone": "(301) 728-3134",
     "region": "DC Ward 7",
@@ -1191,7 +1191,7 @@
   },
   {
     "id": "19065-PART-01",
-    "name": "Capital Christian Fellowship : Capital Christian Fellowship",
+    "name": "Capital Christian Fellowship",
     "address": "Attn: Capital Christian Fellowship 10411 Greenbelt Rd  Lanham MD 20706",
     "phone": "",
     "region": "MD Prince George's County",
@@ -1227,7 +1227,7 @@
   },
   {
     "id": "19104-PART-01",
-    "name": "Grace Ministries - Culmore : Grace Ministries - Culmore",
+    "name": "Grace Ministries - Culmore",
     "address": "Attn: Grace Ministries - Culmore 5901 Leesburg Pike Falls Church VA 22041",
     "phone": "(703) 220-5907",
     "region": "VA Fairfax County",
@@ -1255,7 +1255,7 @@
   },
   {
     "id": "19105-PART-01",
-    "name": "Divine Grace Mission : Divine Grace Mission",
+    "name": "Divine Grace Mission",
     "address": "Attn: Divine Grace Mission 4208 Glenn Dale Rd Bowie MD 20720",
     "phone": "(240) 460-0842",
     "region": "MD Prince George's County",
@@ -1284,7 +1284,7 @@
   },
   {
     "id": "19236-PART-01",
-    "name": "Bull Run Unitarian Universalists : Bull Run Unitarian Universalists",
+    "name": "Bull Run Unitarian Universalists",
     "address": "Attn: Bull Run Unitarian Universalists 9350 Main Street Manassas VA 20110",
     "phone": "(703) 361-6269",
     "region": "VA Manassas City",
@@ -1316,7 +1316,7 @@
   },
   {
     "id": "19262-PART-01",
-    "name": "St. Thomas United Methodist Church : St. Thomas United Methodist Church",
+    "name": "St. Thomas United Methodist Church",
     "address": "Attn: St. Thomas United Methodist Church 8899 Sudley Road Manassas VA 20110",
     "phone": "(703) 368-5161",
     "region": "VA Manassas City",
@@ -1344,7 +1344,7 @@
   },
   {
     "id": "19338-PART-01",
-    "name": "RCCG New Wine Assembly : RCCG New Wine Assembly",
+    "name": "RCCG New Wine Assembly",
     "address": "Attn: RCCG New Wine Assembly 1625 Olive Street NE Washington DC 20019",
     "phone": "(202) 398-2211",
     "region": "DC Ward 7",
@@ -1369,7 +1369,7 @@
   },
   {
     "id": "19351-PART-01",
-    "name": "National Baptist Memorial Church : National Baptist Memorial Church",
+    "name": "National Baptist Memorial Church",
     "address": "Attn: National Baptist Memorial Church 1501 Columbia Rd NW Washington DC 20009",
     "phone": "(202) 841-3742",
     "region": "DC Ward 1",
@@ -1398,7 +1398,7 @@
   },
   {
     "id": "19370-PART-01",
-    "name": "St. Paul's Lutheran Church : St. Paul's Lutheran Church",
+    "name": "St. Paul's Lutheran Church",
     "address": "Attn: St. Paul's Lutheran Church 4900 Connecticut Ave NW  Washington DC  20008",
     "phone": "(202) 966-5489",
     "region": "DC Ward 3",
@@ -1427,7 +1427,7 @@
   },
   {
     "id": "19412-PART-01",
-    "name": "Little David Baptist Church : Little David Baptist Church",
+    "name": "Little David Baptist Church",
     "address": "Attn: Little David Baptist Church 3103 Shepherd Street Mount Rainier MD 20712",
     "phone": "(301) 927-5565",
     "region": "MD Prince George's County",
@@ -1495,7 +1495,7 @@
   },
   {
     "id": "19488-PART-01",
-    "name": "Koinonia Foundation, Inc. : Koinonia Foundation, Inc.",
+    "name": "Koinonia Foundation, Inc.",
     "address": "Attn: Koinonia Foundation, Inc. 6037 Franconia Road Alexandria VA 22310",
     "phone": "(703) 469-7354",
     "region": "VA Fairfax County",
@@ -1532,7 +1532,7 @@
   },
   {
     "id": "19522-PART-01",
-    "name": "Marlboro Churches Food Bank : Marlboro Churches Food Bank",
+    "name": "Marlboro Churches Food Bank",
     "address": "Attn: Marlboro Churches Food Bank 4610 Largo Rd. Upper Marlboro MD 20772",
     "phone": "(240) 447-8712",
     "region": "MD Prince George's County",
@@ -1566,7 +1566,7 @@
   },
   {
     "id": "19534-PART-01",
-    "name": "Iglesia Pentecostal Trono de Jehova : Iglesia Pentecostal Trono de Jehova",
+    "name": "Iglesia Pentecostal Trono de Jehova",
     "address": "Attn: Iglesia Pentecostal Trono de Jehova 2260 York Drive Woodbridge VA 22191",
     "phone": "(703) 501-2559",
     "region": "VA Prince William County",
@@ -1591,7 +1591,7 @@
   },
   {
     "id": "19552-PART-01",
-    "name": "Our Lady Queen of Peace Church : Our Lady Queen of Peace Church",
+    "name": "Our Lady Queen of Peace Church",
     "address": "Attn: Our Lady Queen of Peace Church 2700 19th Street South Arlington VA 22204",
     "phone": "(703) 979-5580",
     "region": "VA Arlington County",
@@ -1625,7 +1625,7 @@
   },
   {
     "id": "19559-PART-01",
-    "name": "Emory Beacon of Light, Inc. : Emory Beacon of Light, Inc.",
+    "name": "Emory Beacon of Light, Inc.",
     "address": "Attn: Emory Beacon of Light, Inc. 6100 Georgia Avenue NW  Washington  DC 20011",
     "phone": "",
     "region": "DC Ward 4",
@@ -1660,7 +1660,7 @@
   },
   {
     "id": "19603-PART-01",
-    "name": "Sterling United Methodist Church : Sterling United Methodist Church",
+    "name": "Sterling United Methodist Church",
     "address": "Attn: Sterling United Methodist Church 304 East Church Road Sterling VA 20164",
     "phone": "(703) 430-6455",
     "region": "**Outside CAFB Service Area**",
@@ -1693,7 +1693,7 @@
   },
   {
     "id": "19618-PART-01",
-    "name": "St. Anne's Episcopal Church ( Food Pantry) : St. Anne's Episcopal Church ( Food Pantry)",
+    "name": "St. Anne's Episcopal Church ( Food Pantry)",
     "address": "Attn: St. Anne's Episcopal Church ( Food Pantry) 1700 Wainwright Drive Reston VA 20190",
     "phone": "(925) 323-7084",
     "region": "VA Fairfax County",
@@ -1724,7 +1724,7 @@
   },
   {
     "id": "19621-PART-01",
-    "name": "New Macedonia Baptist Church : New Macedonia Baptist Church",
+    "name": "New Macedonia Baptist Church",
     "address": "Attn: New Macedonia Baptist Church 4115 Alabama Ave SE  Washington DC 20019",
     "phone": "",
     "region": "DC Ward 7",
@@ -1751,7 +1751,7 @@
   },
   {
     "id": "19625-PART-01",
-    "name": "New Samaritan Baptist Church : New Samaritan Baptist Church",
+    "name": "New Samaritan Baptist Church",
     "address": "Attn: New Samaritan Baptist Church 1100 Florida Ave NE Washington DC 20002",
     "phone": "(202) 397-1870",
     "region": "DC Ward 6",
@@ -1782,7 +1782,7 @@
   },
   {
     "id": "19648-PART-01",
-    "name": "Greater Morning Star Apostolic Church : Greater Morning Star Apostolic Church",
+    "name": "Greater Morning Star Apostolic Church",
     "address": "James V. Myers, JR 7929 Richmond Highway Alexandria VA 22306-",
     "phone": "(913) 290-0606",
     "region": "VA Fairfax County",
@@ -1817,7 +1817,7 @@
   },
   {
     "id": "19711-PART-01",
-    "name": "Royal Missionary Baptist Church : Royal Missionary Baptist Church",
+    "name": "Royal Missionary Baptist Church",
     "address": "Attn: Royal Missionary Baptist Church 8631 Engleside Office Park Alexandria VA 22309",
     "phone": "(571) 481-1896",
     "region": "VA Fairfax County",
@@ -1849,7 +1849,7 @@
   },
   {
     "id": "19726-PART-01",
-    "name": "Prince Emmanuel All Nations SDA Church : Prince Emmanuel All Nations SDA Church",
+    "name": "Prince Emmanuel All Nations SDA Church",
     "address": "Attn: Prince Emmanuel All Nations SDA Church 1925 Mitchellville Rd Bowie MD 20716",
     "phone": "(301) 648-4884",
     "region": "MD Prince George's County",
@@ -1882,7 +1882,7 @@
   },
   {
     "id": "19733-PART-01",
-    "name": "St. Stephen's Baptist Church : St. Stephen's Baptist Church",
+    "name": "St. Stephen's Baptist Church",
     "address": "Attn: St. Stephen's Baptist Church 5757 Temple Hill Road Camp Springs MD 20748",
     "phone": "(240) 350-8132",
     "region": "MD Prince George's County",
@@ -1915,7 +1915,7 @@
   },
   {
     "id": "19734-PART-01",
-    "name": "Breath of Life SDA Church : Breath of Life SDA Church",
+    "name": "Breath of Life SDA Church",
     "address": "Attn: Breath of Life SDA Church 11310 Fort Washington Road Fort Washington MD 20744",
     "phone": "(301) 292-2100",
     "region": "MD Prince George's County",
@@ -1950,7 +1950,7 @@
   },
   {
     "id": "19770-PART-01",
-    "name": "Apostolic Church Glorious Vision : Apostolic Church Glorious Vision",
+    "name": "Apostolic Church Glorious Vision",
     "address": "Attn: Apostolic Church Glorious Vision 3004 Enterprise Road Bowie MD 20721",
     "phone": "(757) 275-3905",
     "region": "MD Prince George's County",
@@ -1986,7 +1986,7 @@
   },
   {
     "id": "19775-PART-01",
-    "name": "Bethesda Help : Bethesda Help",
+    "name": "Bethesda Help",
     "address": "Attn: Bethesda Help 10100 Old Georgetown Road Bethesda MD 20814",
     "phone": "(301) 928-4078",
     "region": "MD Montgomery County",
@@ -2026,7 +2026,7 @@
   },
   {
     "id": "19832-PART-01",
-    "name": "Turner AME Church : Turner AME Church",
+    "name": "Turner AME Church",
     "address": "Attn: Turner AME 7201 16th Place Hyattsville MD 20783",
     "phone": "(240) 417-6012",
     "region": "MD Prince George's County",
@@ -2058,7 +2058,7 @@
   },
   {
     "id": "19834-PART-01",
-    "name": "St. Jude Catholic Church : St. Jude Catholic Church",
+    "name": "St. Jude Catholic Church",
     "address": "Attn: St. Jude Catholic Church 12701 Veirs Mill Rockville MD 20853",
     "phone": "",
     "region": "MD Montgomery County",
@@ -2085,7 +2085,7 @@
   },
   {
     "id": "19836-PART-01",
-    "name": "Jamil-UL Jalil : Jamil-UL Jalil",
+    "name": "Jamil-UL Jalil",
     "address": "Attn: Jamil-UL Jalil 10845 Lanham Severn Road Glenn Dale MD 20769",
     "phone": "(240) 381-1143",
     "region": "MD Prince George's County",
@@ -2130,7 +2130,7 @@
   },
   {
     "id": "19842-PART-01",
-    "name": "Mother of Light Center : Mother of Light Center",
+    "name": "Mother of Light Center",
     "address": "Attn: Mother of Light Center 421 Clifford Ave Alexandria VA 22305",
     "phone": "(703) 508-5289",
     "region": "VA City of Alexandria",
@@ -2202,7 +2202,7 @@
   },
   {
     "id": "21950-PART-01",
-    "name": "Lutheran Church of the Abiding Presence : Lutheran Church of the Abiding Presence",
+    "name": "Lutheran Church of the Abiding Presence",
     "address": "Attn: Lutheran Church of the Abiding Presence 6304 Lee Chapel Rd Burke VA 22015",
     "phone": "(703) 455-7500",
     "region": "VA Fairfax County",
@@ -2234,7 +2234,7 @@
   },
   {
     "id": "22017-PART-01",
-    "name": "Loaves & Fishes : Loaves & Fishes",
+    "name": "Loaves & Fishes",
     "address": "Attn: Loaves & Fishes 1525 Newton St NW Washington DC 20910",
     "phone": "(240) 855-5874",
     "region": "DC Ward 1",
@@ -2268,7 +2268,7 @@
   },
   {
     "id": "22208-PART-01",
-    "name": "Northern Virginia Food Rescue : Northern Virginia Food Rescue",
+    "name": "Northern Virginia Food Rescue",
     "address": "Attn: Northern Virginia Food Rescue 10535 Battleview Pkwy Manassas VA 20110",
     "phone": "(703) 822-5205",
     "region": "VA Prince William County",
@@ -2299,7 +2299,7 @@
   },
   {
     "id": "22259-PART-01",
-    "name": "The Redeemed Christian Church of God - Victory Temple : The Redeemed Christian Church of God - Victory Temple",
+    "name": "The Redeemed Christian Church of God - Victory Temple",
     "address": "Attn: The Redeemed Christian Church of God - Victory Temple 7218 Lockport Place Lorton VA 22079",
     "phone": "(804) 625-9423",
     "region": "VA Fairfax County",
@@ -2330,7 +2330,7 @@
   },
   {
     "id": "22459-PART-01",
-    "name": "Love Donation Pantry : Love Donation Pantry",
+    "name": "Love Donation Pantry",
     "address": "Attn: Love Donation Pantry 3450 Laurel Fort Meade Rd. Suite 101 Laurel MD 20708",
     "phone": "(240) 486-4213",
     "region": "MD Prince George's County",
@@ -2388,7 +2388,7 @@
   },
   {
     "id": "18782-PART-01",
-    "name": "Wells Robertson House : Wells Robertson House",
+    "name": "Wells Robertson House",
     "address": "Attn: Wells Robertson House 1 Wells Ave Gaithersburg MD 20877",
     "phone": "(301) 258-6390",
     "region": "MD Montgomery County",
@@ -2428,7 +2428,7 @@
   },
   {
     "id": "14085-PART-01",
-    "name": "Ward 7 Food Center of Peace Lutheran Church : Ward 7 Food Center of Peace Lutheran Church",
+    "name": "Ward 7 Food Center of Peace Lutheran Church",
     "address": "Attn:  Food & Clothing Center of Ward 7 (Peace Lutheran Church) 4929 Ames St NE Washington  DC 20019",
     "phone": "(301) 367-6983",
     "region": "DC Ward 7",
@@ -2536,7 +2536,7 @@
   },
   {
     "id": "14222-PART-01",
-    "name": "SevaTruck Foundation : SevaTruck Foundation",
+    "name": "SevaTruck Foundation",
     "address": "Attn: SevaTruck Foundation 2815 Old Lee Hwy Fairfax Fairfax VA 22031",
     "phone": "(202) 550-3018",
     "region": "VA Fairfax County",
@@ -2571,7 +2571,7 @@
   },
   {
     "id": "19066-PART-01",
-    "name": "Community Multi-Service : Community Multi-Service",
+    "name": "Community Multi-Service",
     "address": "Community Multi-Service 6300 9th St NW  Washington DC  DC 20011",
     "phone": "(301) 588-9280",
     "region": "DC Ward 4",
@@ -2610,7 +2610,7 @@
   },
   {
     "id": "19839-PART-01",
-    "name": "Central Baptist Church of Camp Springs : Central Baptist Church of Camp Springs",
+    "name": "Central Baptist Church of Camp Springs",
     "address": "Attn: Central Baptist Church of Camp Springs 5600 Old Branch Avenue Camp Springs MD 20748",
     "phone": "(301) 899-3800",
     "region": "MD Prince George's County",
@@ -2645,7 +2645,7 @@
   },
   {
     "id": "14220-PART-01",
-    "name": "Purity Baptist Church : Purity Baptist Church",
+    "name": "Purity Baptist Church",
     "address": "Attn: Purity Baptist Church 1325 Maryland Ave NE Washington DC 20002",
     "phone": "(202) 397-4333",
     "region": "DC Ward 6",
@@ -2678,7 +2678,7 @@
   },
   {
     "id": "14600-PART-01",
-    "name": "National City Christian Church : National City Christian Church",
+    "name": "National City Christian Church",
     "address": "Attn: National City Christian Church 5 Thomas Circle NW Washington DC 20005",
     "phone": "(202) 232-0323",
     "region": "DC Ward 2",
@@ -2741,7 +2741,7 @@
   },
   {
     "id": "14810-PART-01",
-    "name": "Covenant Baptist Food Pantry : Covenant Baptist Food Pantry",
+    "name": "Covenant Baptist Food Pantry",
     "address": "Attn: Covenant Baptist Food Pantry 3845 South Capitol St SW Washington DC 20032",
     "phone": "(202) 438-7532",
     "region": "DC Ward 8",
@@ -2776,7 +2776,7 @@
   },
   {
     "id": "14820-PART-01",
-    "name": "Nineteenth Street Baptist Church : Nineteenth Street Baptist Church",
+    "name": "Nineteenth Street Baptist Church",
     "address": "Attn: Nineteenth Street Baptist Church 4606 16th St NW Washington DC 20011",
     "phone": "(202) 829-2773",
     "region": "DC Ward 4",
@@ -2810,7 +2810,7 @@
   },
   {
     "id": "14850-PART-01",
-    "name": "First Baptist Church of Capitol Heights : First Baptist Church of Capitol Heights",
+    "name": "First Baptist Church of Capitol Heights",
     "address": "Attn: First Baptist Church of Capitol Heights 6 Capitol Heights Blvd Capitol Heights MD 20743",
     "phone": "(301) 336-0722",
     "region": "MD Prince George's County",
@@ -2842,7 +2842,7 @@
   },
   {
     "id": "14885-PART-01",
-    "name": "Assumption Outreach : Assumption Outreach",
+    "name": "Assumption Outreach",
     "address": "Attn: Assumption Outreach 220 Highview Place SE  Washington DC 20032",
     "phone": "(202) 561-5941",
     "region": "DC Ward 8",
@@ -2874,7 +2874,7 @@
   },
   {
     "id": "15130-PART-01",
-    "name": "Metropolitan SDA Church : Metropolitan SDA Church",
+    "name": "Metropolitan SDA Church",
     "address": "Attn: Metropolitan SDA Church 6303 Riggs Rd Hyattsville MD 20783",
     "phone": "(301) 853-2224",
     "region": "MD Prince George's County",
@@ -2903,7 +2903,7 @@
   },
   {
     "id": "15550-PART-01",
-    "name": "Church of Christ of Dale City : Church of Christ of Dale City",
+    "name": "Church of Christ of Dale City",
     "address": "Attn: Church of Christ of Dale City 13130 Hillendale Drive Dale City VA 22193",
     "phone": "(703) 346-4991",
     "region": "VA Prince William County",
@@ -2934,7 +2934,7 @@
   },
   {
     "id": "15610-PART-01",
-    "name": "Food For All : Food For All",
+    "name": "Food For All",
     "address": "Attn: Food For All 1810 16th St NW Washington DC 20009",
     "phone": "(240) 410-0024",
     "region": "DC Ward 2",
@@ -2970,7 +2970,7 @@
   },
   {
     "id": "15870-PART-01",
-    "name": "Fort Foote Baptist Church : Fort Foote Baptist Church",
+    "name": "Fort Foote Baptist Church",
     "address": "Attn: Fort Foote Baptist Church 8310 Fort Foot Road Fort Washington MD 20744",
     "phone": "(240) 281-2303",
     "region": "MD Prince George's County",
@@ -2999,7 +2999,7 @@
   },
   {
     "id": "15920-PART-01",
-    "name": "Our Lady of Perpetual Help Church : Our Lady of Perpetual Help Church",
+    "name": "Our Lady of Perpetual Help Church",
     "address": "Attn: Our Lady of Perpetual Help Church 1600 Morris Rd SE Washington DC 20020",
     "phone": "(202) 678-4999",
     "region": "DC Ward 8",
@@ -3028,7 +3028,7 @@
   },
   {
     "id": "16050-PART-01",
-    "name": "Fort Washington Food Pantry : Fort Washington Food Pantry",
+    "name": "Fort Washington Food Pantry",
     "address": "Attn: Fort Washington Food Pantry 9801 Livingston Road Fort Washington MD 20744",
     "phone": "(202) 679-8898",
     "region": "MD Prince George's County",
@@ -3063,7 +3063,7 @@
   },
   {
     "id": "16245-PART-01",
-    "name": "WFCM Food Pantry : WFCM Food Pantry",
+    "name": "WFCM Food Pantry",
     "address": "Attn: WFCM Food Pantry 4511 Daly Dr Suite J Chantilly VA 20151",
     "phone": "(703) 988-9656",
     "region": "VA Fairfax County",
@@ -3108,7 +3108,7 @@
   },
   {
     "id": "16660-PART-01",
-    "name": "Washington Spanish SDA Church : Washington Spanish SDA Church",
+    "name": "Washington Spanish SDA Church",
     "address": "Attn: Washington Spanish SDA Church 12604 New Hampshire Avenue Silver Spring MD 20904",
     "phone": "(240) 638-7086",
     "region": "MD Montgomery County",
@@ -3139,7 +3139,7 @@
   },
   {
     "id": "16700-PART-01",
-    "name": "Gethsemane United Methodist Church : Gethsemane United Methodist Church",
+    "name": "Gethsemane United Methodist Church",
     "address": "Attn: Gethsemane United Methodist Church 910 Addison Road Capitol Heights MD 20743",
     "phone": "(301) 237-7116",
     "region": "MD Prince George's County",
@@ -3173,7 +3173,7 @@
   },
   {
     "id": "16705-PART-01",
-    "name": "Bread & Fishes : Bread & Fishes",
+    "name": "Bread & Fishes",
     "address": "Attn: Bread & Fishes 3890 Cameron Street Dumfries Va 22026",
     "phone": "(240) 778-3764",
     "region": "VA Prince William County",
@@ -3206,7 +3206,7 @@
   },
   {
     "id": "16745-PART-01",
-    "name": "Urban Outreach Inc. : Urban Outreach Inc.",
+    "name": "Urban Outreach Inc.",
     "address": "Attn: Urban Outreach Inc. 5343 C St SE  Suite 204 Washington DC 20019",
     "phone": "(202) 575-4867",
     "region": "DC Ward 7",
@@ -3239,7 +3239,7 @@
   },
   {
     "id": "18035-PART-01",
-    "name": "Greater Fellowship Missionary Baptist Church : Greater Fellowship Missionary Baptist Church",
+    "name": "Greater Fellowship Missionary Baptist Church",
     "address": "Attn: Greater Fellowship Missionary Baptist Church 814 Alabama Ave SE Washington DC 20032",
     "phone": "(202) 413-4462",
     "region": "DC Ward 8",
@@ -3270,7 +3270,7 @@
   },
   {
     "id": "18722-PART-01",
-    "name": "Prince George's County DSS : Prince George's County DSS",
+    "name": "Prince George's County DSS",
     "address": "Attn: Prince George's County DSS 805 Brightseat Rd Landover MD 20785",
     "phone": "(301) 909-6364",
     "region": "MD Prince George's County",
@@ -3314,7 +3314,7 @@
   },
   {
     "id": "18732-PART-01",
-    "name": "St. Paul UMC : St. Paul UMC",
+    "name": "St. Paul UMC",
     "address": "Attn: St. Paul UMC 6634 St. Barnabas Road Oxon Hill  MD 20745",
     "phone": "2 (440) 460-3401",
     "region": "MD Prince George's County",
@@ -3343,7 +3343,7 @@
   },
   {
     "id": "18738-PART-01",
-    "name": "St. Margaret of Scotland Catholic Church : St. Margaret of Scotland Catholic Church",
+    "name": "St. Margaret of Scotland Catholic Church",
     "address": "Attn: St. Margaret of Scotland Catholic Church 408 Addison Road, South Capitol Heights MD 20743",
     "phone": "(301) 336-3344",
     "region": "MD Prince George's County",
@@ -3376,7 +3376,7 @@
   },
   {
     "id": "18742-PART-01",
-    "name": "FISH of Laurel, Inc. : FISH of Laurel, Inc.",
+    "name": "FISH of Laurel, Inc.",
     "address": "Attn: FISH of Laurel, Inc. 308 Gorman Ave Laurel  MD 20707",
     "phone": "(240) 460-5667",
     "region": "MD Prince George's County",
@@ -3439,7 +3439,7 @@
   },
   {
     "id": "19059-PART-01",
-    "name": "Victory Drug Center : Victory Drug Center",
+    "name": "Victory Drug Center",
     "address": "Attn: Victory Drug Center 1804 Quarter Avenue Capitol Heights MD 20743",
     "phone": "(301) 735-2222",
     "region": "MD Prince George's County",
@@ -3510,7 +3510,7 @@
   },
   {
     "id": "19120-PART-01",
-    "name": "Woodlawn United Methodist Church : Woodlawn United Methodist Church",
+    "name": "Woodlawn United Methodist Church",
     "address": "Attn: Woodlawn United Methodist Church 7730 Fordson Road Alexandria VA 22306",
     "phone": "(703) 360-3050",
     "region": "VA Fairfax County",
@@ -3539,7 +3539,7 @@
   },
   {
     "id": "19200-PART-01",
-    "name": "Floris United Methodist Church : Floris United Methodist Church",
+    "name": "Floris United Methodist Church",
     "address": "Attn: Floris United Methodist Church 13600 Frying Pan Road Herndon VA 20171",
     "phone": "(703) 798-5826",
     "region": "VA Fairfax County",
@@ -3572,7 +3572,7 @@
   },
   {
     "id": "19280-PART-01",
-    "name": "Galilee Community Development Corporation : Galilee Community Development Corporation",
+    "name": "Galilee Community Development Corporation",
     "address": "Attn: Galilee Community Development Corporation 2101 Shadyside Ave  Suitland MD  20746",
     "phone": "",
     "region": "MD Prince George's County",
@@ -3610,7 +3610,7 @@
   },
   {
     "id": "19302-PART-01",
-    "name": "Crossover Church : Crossover Church",
+    "name": "Crossover Church",
     "address": "Angela Wilson 5340 Baltimore Ave Hyattsville MD 20781",
     "phone": "(301) 927-5620",
     "region": "MD Prince George's County",
@@ -3644,7 +3644,7 @@
   },
   {
     "id": "19307-PART-01",
-    "name": "Luther Rice Neighborhood Center : Luther Rice Neighborhood Center",
+    "name": "Luther Rice Neighborhood Center",
     "address": "Attn: Luther Rice Neighborhood Center 801 University Blvd W Silver Spring MD 20901",
     "phone": "(301) 593-1130",
     "region": "MD Montgomery County",
@@ -3675,7 +3675,7 @@
   },
   {
     "id": "19313-PART-01",
-    "name": "Sydenstricker UMC : Sydenstricker UMC",
+    "name": "Sydenstricker UMC",
     "address": "Attn: Sydenstricker UMC 8508 Hooes Road Springfield VA 22153",
     "phone": "(571) 235-6048",
     "region": "VA Fairfax County",
@@ -3708,7 +3708,7 @@
   },
   {
     "id": "19341-PART-01",
-    "name": "Clothing of Power Eternal Church : Clothing of Power Eternal Church",
+    "name": "Clothing of Power Eternal Church",
     "address": "Attn: Clothing of Power Eternal Church 25 Quire Ave Capitol Heights MD 20743",
     "phone": "(240) 398-1681",
     "region": "MD Prince George's County",
@@ -3844,7 +3844,7 @@
   },
   {
     "id": "19415-PART-01",
-    "name": "St. Camillus Catholic Church : St. Camillus Catholic Church",
+    "name": "St. Camillus Catholic Church",
     "address": "Attn: St. Camillus Catholic Church 1600 Saint Camillus Drive  Silver Spring MD 20903",
     "phone": "(301) 452-4233",
     "region": "MD Montgomery County",
@@ -3879,7 +3879,7 @@
   },
   {
     "id": "19433-PART-01",
-    "name": "Great Commission Change of Life Ministries : Great Commission Change of Life Ministries",
+    "name": "Great Commission Change of Life Ministries",
     "address": "Attn: Great Commission Change of Life Ministries 7937 Penn Randall Place Unit A Upper Marlboro  MD 20772",
     "phone": "",
     "region": "MD Prince George's County",
@@ -4015,7 +4015,7 @@
   },
   {
     "id": "19549-PART-01",
-    "name": "Dar Al-Hijrah Islamic Center : Dar Al-Hijrah Islamic Center",
+    "name": "Dar Al-Hijrah Islamic Center",
     "address": "Attn: Dar Al-Hijrah Islamic Center 3159 Row Street Falls Church VA 22044",
     "phone": "(216) 262-1669",
     "region": "VA Fairfax County",
@@ -4054,7 +4054,7 @@
   },
   {
     "id": "19583-PART-01",
-    "name": "Gospel Assembly Church : Gospel Assembly Church",
+    "name": "Gospel Assembly Church",
     "address": "Attn: Gospel Assembly Church 8740-12 Cherry Lane Laurel MD 20707",
     "phone": "(301) 605-3756",
     "region": "MD Prince George's County",
@@ -4085,7 +4085,7 @@
   },
   {
     "id": "19587-PART-01",
-    "name": "Restoration Church : Restoration Church",
+    "name": "Restoration Church",
     "address": "Attn: Restoration Center 119 Centerway Dr. Greenbelt MD 20770",
     "phone": "(240) 645-7177",
     "region": "MD Prince George's County",
@@ -4121,7 +4121,7 @@
   },
   {
     "id": "19588-PART-01",
-    "name": "Clifton Park Baptist Church : Clifton Park Baptist Church",
+    "name": "Clifton Park Baptist Church",
     "address": "Attn: Clifton Park Baptist Church 8818 Piney Branch Rd Silver Spring MD 20903",
     "phone": "(240) 372-3616",
     "region": "MD Montgomery County",
@@ -4169,7 +4169,7 @@
   },
   {
     "id": "19594-PART-01",
-    "name": "Oxon Hill Church of Christ : Oxon Hill Church of Christ",
+    "name": "Oxon Hill Church of Christ",
     "address": "Attn: Oxon Hill Church of Christ 4201 Brinkley Road Temple Hills MD 20748",
     "phone": "(301) 875-9322",
     "region": "MD Prince George's County",
@@ -4241,7 +4241,7 @@
   },
   {
     "id": "19604-PART-01",
-    "name": "Springfield Christian Church : Springfield Christian Church",
+    "name": "Springfield Christian Church",
     "address": "Attn: Springfield Christian Church 5407 Backlick Rd Springfield VA 22151",
     "phone": "(703) 507-6689",
     "region": "VA Fairfax County",
@@ -4272,7 +4272,7 @@
   },
   {
     "id": "19608-PART-01",
-    "name": "Montgomery County Muslim Foundation : Montgomery County Muslim Foundation",
+    "name": "Montgomery County Muslim Foundation",
     "address": "Attn: Montgomery County Muslim Foundation 11 Park Ave Gaithersburg MD 20877",
     "phone": "(301) 800-1597",
     "region": "MD Montgomery County",
@@ -4338,7 +4338,7 @@
   },
   {
     "id": "19634-PART-01",
-    "name": "This Generation Ministries : This Generation Ministries",
+    "name": "This Generation Ministries",
     "address": "Attn: This Generation Ministries 9470 Annapolis Rd Suite 407 Lanham MD 20706",
     "phone": "(240) 374-2901",
     "region": "MD Prince George's County",
@@ -4367,7 +4367,7 @@
   },
   {
     "id": "19653-PART-01",
-    "name": "Groveton Baptist Church : Groveton Baptist Church",
+    "name": "Groveton Baptist Church",
     "address": "Attn: Groveton Baptist Church 6511 Richmond Highway  Alexandria VA 22306",
     "phone": "(301) 648-5808",
     "region": "VA Fairfax County",
@@ -4437,7 +4437,7 @@
   },
   {
     "id": "19690-PART-01",
-    "name": "Mt. Jezreel Baptist Church : Mt. Jezreel Baptist Church",
+    "name": "Mt. Jezreel Baptist Church",
     "address": "Attn: Mt. Jezreel Baptist Church 420 University Blvd East Silver Spring MD 20901",
     "phone": "(301) 461-4257",
     "region": "MD Montgomery County",
@@ -4495,7 +4495,7 @@
   },
   {
     "id": "19705-PART-01",
-    "name": "WeSERVE CDC : WeSERVE CDC",
+    "name": "WeSERVE CDC",
     "address": "Attn: Praise Center Church of God In Christ 17948 Fraley Blvd Dumfries VA 22026",
     "phone": "(571) 781-2722",
     "region": "VA Prince William County",
@@ -4528,7 +4528,7 @@
   },
   {
     "id": "19719-PART-01",
-    "name": "Kings and Priests International Ministries : Kings and Priests International Ministries",
+    "name": "Kings and Priests International Ministries",
     "address": "Attn: Kings and Priests International Ministries 520 Randolph Road Silver Spring MD 20904",
     "phone": "(301) 467-6646",
     "region": "MD Montgomery County",
@@ -4570,7 +4570,7 @@
   },
   {
     "id": "19745-PART-01",
-    "name": "Chrisma Charities : Chrisma Charities",
+    "name": "Chrisma Charities",
     "address": "Attn: Chrisma Charities 12805 Georgia Avenue Silver Spring MD 20906",
     "phone": "",
     "region": "MD Montgomery County",
@@ -4611,7 +4611,7 @@
   },
   {
     "id": "19746-PART-01",
-    "name": "CAC Bethel Fellowship Church : CAC Bethel Fellowship Church",
+    "name": "CAC Bethel Fellowship Church",
     "address": "Attn: CAC Bethel Fellowship Church 7513 Northern Avenue Glenn Dale MD 20769",
     "phone": "(301) 352-2900",
     "region": "MD Prince George's County",
@@ -4712,7 +4712,7 @@
   },
   {
     "id": "19796-PART-01",
-    "name": "Oxon Hill UMC : Oxon Hill UMC",
+    "name": "Oxon Hill UMC",
     "address": "Attn: Oxon Hill UMC 6400 Livingston Road Oxon Hill MD 20745",
     "phone": "(240) 687-1409",
     "region": "MD Prince George's County",
@@ -4741,7 +4741,7 @@
   },
   {
     "id": "19798-PART-01",
-    "name": "Christ Embassy Maryland : Christ Embassy Maryland",
+    "name": "Christ Embassy Maryland",
     "address": "Attn: Christ Embassy Maryland 1221 Carraway Court Suite 1010 Largo MD 20774",
     "phone": "(301) 537-1765",
     "region": "MD Prince George's County",
@@ -4772,7 +4772,7 @@
   },
   {
     "id": "19805-PART-01",
-    "name": "Calvary Episcopal Church : Calvary Episcopal Church",
+    "name": "Calvary Episcopal Church",
     "address": "Attn: Calvary Episcopal Church 509 I Street NE Washington DC 20002",
     "phone": "(858) 405-6276",
     "region": "DC Ward 6",
@@ -4804,7 +4804,7 @@
   },
   {
     "id": "19819-PART-01",
-    "name": "Impact One Church : Impact One Church",
+    "name": "Impact One Church",
     "address": "Attn: Impact One Church 7230 Central Avenue Capitol Heights MD 20743",
     "phone": "(301) 333-2083",
     "region": "MD Prince George's County",
@@ -4835,7 +4835,7 @@
   },
   {
     "id": "19823-PART-01",
-    "name": "Royalhouse Chapel International : Royalhouse Chapel International",
+    "name": "Royalhouse Chapel International",
     "address": "Attn: Royalhouse Chapel International 7911 Braygreen Road Laurel MD 20707",
     "phone": "(301) 437-9441",
     "region": "MD Prince George's County",
@@ -4868,7 +4868,7 @@
   },
   {
     "id": "19838-PART-01",
-    "name": "Antioch Baptist Church of Clinton : Antioch Baptist Church of Clinton",
+    "name": "Antioch Baptist Church of Clinton",
     "address": "Attn: Antioch Baptist Church of Clinton 9107 Pine View Lane Clinton MD 20735",
     "phone": "(301) 868-3877",
     "region": "MD Prince George's County",
@@ -4900,7 +4900,7 @@
   },
   {
     "id": "19843-PART-01",
-    "name": "St. Matthias Catholic Church : St. Matthias Catholic Church",
+    "name": "St. Matthias Catholic Church",
     "address": "Attn: St. Matthias Catholic Church 9475 Annapolis Lanham MD 20706",
     "phone": "(301) 459-4814",
     "region": "MD Prince George's County",
@@ -4931,7 +4931,7 @@
   },
   {
     "id": "19856-PART-01",
-    "name": "Guru Nanak Foundation of America (GNFA) : Guru Nanak Foundation of America (GNFA)",
+    "name": "Guru Nanak Foundation of America (GNFA)",
     "address": "Attn: Guru Nanak Foundation of America (GNFA) 12917 Old Columbia Pike Silver Spring MD 20904",
     "phone": "(301) 728-7138",
     "region": "MD Montgomery County",
@@ -4967,7 +4967,7 @@
   },
   {
     "id": "19873-PART-01",
-    "name": "GAP Food Program : GAP Food Program",
+    "name": "GAP Food Program",
     "address": "Attn: Destiny International Christian Center 6715 Suitland Road Morningside MD 20746",
     "phone": "(202) 528-4321",
     "region": "MD Prince George's County",
@@ -4996,7 +4996,7 @@
   },
   {
     "id": "21711-PART-01",
-    "name": "La Iglesia Episcopal de Santa Maria : La Iglesia Episcopal de Santa Maria",
+    "name": "La Iglesia Episcopal de Santa Maria",
     "address": "Attn: La Iglesia de Santa Maria 7000 Arlington Blvd Falls Church VA 22042",
     "phone": "(703) 244-1158",
     "region": "VA Fairfax County",
@@ -5029,7 +5029,7 @@
   },
   {
     "id": "21874-PART-01",
-    "name": "DMV Food Justice Initiative : DMV Food Justice Initiative",
+    "name": "DMV Food Justice Initiative",
     "address": "Attn: DMV Food Justice Initiative 3110 Chichester Lane Fairfax VA 22031",
     "phone": "(202) 415-9757",
     "region": "VA Fairfax County",
@@ -5065,7 +5065,7 @@
   },
   {
     "id": "21947-PART-01",
-    "name": "Celestial Church of Christ : Celestial Church of Christ",
+    "name": "Celestial Church of Christ",
     "address": "Attn: Celestial Church of Chirst 1880 Adams Street NE Washington DC 20018",
     "phone": "(240) 467-8399",
     "region": "DC Ward 5",
@@ -5094,7 +5094,7 @@
   },
   {
     "id": "22016-PART-01",
-    "name": "Park Road Community Church : Park Road Community Church",
+    "name": "Park Road Community Church",
     "address": "Attn: Park Road Community Church 1019 Park Road NW Washington DC 20010",
     "phone": "(202) 740-7890",
     "region": "DC Ward 1",
@@ -5123,7 +5123,7 @@
   },
   {
     "id": "22207-PART-01",
-    "name": "Burke United Methodist Church : Burke United Methodist Church",
+    "name": "Burke United Methodist Church",
     "address": "Attn: Burke United Methodist Church 6200 Burke Centre Parkway Burke VA 22015",
     "phone": "(703) 250-6100",
     "region": "VA Fairfax County",
@@ -5161,7 +5161,7 @@
   },
   {
     "id": "22261-PART-01",
-    "name": "Greater Little Zion Baptist Church : Greater Little Zion Baptist Church",
+    "name": "Greater Little Zion Baptist Church",
     "address": "Attn: Greater Little Zion Baptist Church 10185 Zion Dr Fairfax VA 22032",
     "phone": "(703) 728-4513",
     "region": "VA Fairfax County",
@@ -5195,7 +5195,7 @@
   },
   {
     "id": "22380-PART-01",
-    "name": "She Believes in Me : She Believes in Me",
+    "name": "She Believes in Me",
     "address": "Attn: She Believes in Me 761 Elden Street Herndon VA 20170",
     "phone": "(703) 328-2512",
     "region": "VA Fairfax County",
@@ -5231,7 +5231,7 @@
   },
   {
     "id": "22531-PART-01",
-    "name": "Gaithersburg HELP : Gaithersburg HELP",
+    "name": "Gaithersburg HELP",
     "address": "Attn: Gaithersburg HELP 301 Muddy Branch Road Gaithersburg MD 20878",
     "phone": "(301) 216-2510",
     "region": "MD Montgomery County",
@@ -5268,7 +5268,7 @@
   },
   {
     "id": "22555-PART-02",
-    "name": "Annandale UMC : Annandale UMC",
+    "name": "Annandale UMC",
     "address": "Attn: Annandale UMC 7901 Heritage Drive Annandale VA 22003",
     "phone": "(703) 217-2514",
     "region": "VA Fairfax County",
@@ -5301,7 +5301,7 @@
   },
   {
     "id": "22561-PART-01",
-    "name": "NW Community Food : NW Community Food",
+    "name": "NW Community Food",
     "address": "Attn: NW Community Food 4225 Connecticut AVE NW Washington DC DC 20008",
     "phone": "(202) 594-0399",
     "region": "DC Ward 3",
@@ -5332,7 +5332,7 @@
   },
   {
     "id": "22580-PART-01",
-    "name": "First Alliance Church : First Alliance Church",
+    "name": "First Alliance Church",
     "address": "Attn: First Alliance Church 14500 New Hampshire Ave Silver Spring MD 20904",
     "phone": "(301) 785-8571",
     "region": "MD Montgomery County",
@@ -5402,7 +5402,7 @@
   },
   {
     "id": "22634-PART-01",
-    "name": "Grace Baptist Church : Grace Baptist Church",
+    "name": "Grace Baptist Church",
     "address": "Attn: Grace Baptist Church 3121 Trinity Drive Bowie MD 20715",
     "phone": "(301) 262-1767",
     "region": "MD Prince George's County",
@@ -5431,7 +5431,7 @@
   },
   {
     "id": "22639-PART-01",
-    "name": "Ports Town Church : Ports Town Church",
+    "name": "Ports Town Church",
     "address": "Attn: Port Towns Church 4500 57th Ave Bladensburg MD 20717",
     "phone": "(301) 525-6328",
     "region": "MD Prince George's County",
@@ -5461,7 +5461,7 @@
   },
   {
     "id": "22663-PART-01",
-    "name": "St. Peters in the Woods : St. Peters in the Woods",
+    "name": "St. Peters in the Woods",
     "address": "Attn: St. Peters in the Woods 5911 Fairview Woods Drive Fairfax Station VA 22039",
     "phone": "(703) 503-9210",
     "region": "VA Fairfax County",
@@ -5523,7 +5523,7 @@
   },
   {
     "id": "19582-PART-01",
-    "name": "We Are Family : We Are Family",
+    "name": "We Are Family",
     "address": "Attn: We Are Family 3335 Sherman Ave NW Washington DC 20001",
     "phone": "(202) 487-8698",
     "region": "DC Ward 1",
@@ -5628,7 +5628,7 @@
   },
   {
     "id": "19837-PART-01",
-    "name": "Church of The Redeemer of Gaithersburg : Church of The Redeemer of Gaithersburg",
+    "name": "Church of The Redeemer of Gaithersburg",
     "address": "Attn: Church of The Redeemer 19425 Woodfield Road Gaithersburg MD 20879",
     "phone": "(240) 238-1576",
     "region": "MD Montgomery County",
@@ -5661,7 +5661,7 @@
   },
   {
     "id": "14830-PART-01",
-    "name": "Faith United Ministries Outreach : Faith United Ministries Outreach",
+    "name": "Faith United Ministries Outreach",
     "address": "Attn: Faith United Ministries Outreach 7905 Fernham Lane District Heights MD 20747",
     "phone": "(301) 736-2383",
     "region": "MD Prince George's County",
@@ -5690,7 +5690,7 @@
   },
   {
     "id": "19862-PART-01",
-    "name": "The Upcounty Hub Inc : The Upcounty Hub Inc",
+    "name": "The Upcounty Hub Inc",
     "address": "Attn: The Upcounty Hub Inc 12900 Middlebrook Road Suite 1100  Germantown  MD 20874",
     "phone": "(240) 912-1068",
     "region": "MD Montgomery County",
@@ -5768,7 +5768,7 @@
   },
   {
     "id": "19569-PART-01",
-    "name": "Recovery Program Solutions of Virginia : Recovery Program Solutions of Virginia",
+    "name": "Recovery Program Solutions of Virginia",
     "address": "Attn: Consumer Wellness Center  Recovery Program Solutions of Virginia 7611 Little River Turnpike Suite E100 Annandale VA 22003",
     "phone": "(703) 939-0869",
     "region": "VA Fairfax County",
@@ -5846,7 +5846,7 @@
   },
   {
     "id": "22737-PART-01",
-    "name": "The Family Place : The Family Place",
+    "name": "The Family Place",
     "address": "Attn: The Family Place 3309 16th St NW Washington DC DC 20010",
     "phone": "(202) 644-1125",
     "region": "DC Ward 1",
@@ -5879,7 +5879,7 @@
   },
   {
     "id": "22739-PART-01",
-    "name": "University of District of Columbia : University of District of Columbia",
+    "name": "University of District of Columbia",
     "address": "Attn: University of District of Columbia 4250 Connecticut Ave NW Washington DC DC 20008",
     "phone": "(202) 603-5090",
     "region": "DC Ward 3",
@@ -5912,7 +5912,7 @@
   },
   {
     "id": "22702-PART-01",
-    "name": "American University : American University",
+    "name": "American University",
     "address": "Melanie Pagen  4400 Massachusetts Ave Washington  DC 20016",
     "phone": "(305) 766-5993",
     "region": "DC Ward 3",
@@ -6018,7 +6018,7 @@
   },
   {
     "id": "19261-PART-01",
-    "name": "St. Anthony of Padua Catholic Church : St. Anthony of Padua Catholic Church",
+    "name": "St. Anthony of Padua Catholic Church",
     "address": "Attn: St. Anthony of Padua Catholic Church 3305 Glen Carlyn Road Falls Church VA 22041",
     "phone": "(571) 471-3194",
     "region": "VA Fairfax County",
@@ -6136,7 +6136,7 @@
   },
   {
     "id": "19724-PART-01",
-    "name": "First Baptist Church of District Heights : First Baptist Church of District Heights",
+    "name": "First Baptist Church of District Heights",
     "address": "Attn: First Baptist Church of District Heights 7234 Lansdale Street District Heights MD 20747",
     "phone": "(301) 887-7380",
     "region": "MD Prince George's County",
@@ -6166,7 +6166,7 @@
   },
   {
     "id": "19727-PART-01",
-    "name": "No Limits Outreach Ministries : No Limits Outreach Ministries",
+    "name": "No Limits Outreach Ministries",
     "address": "Attn: No Limits Outreach Ministries 7721 Barlowe Rd Landover MD 20785",
     "phone": "(202) 341-5159",
     "region": "MD Prince George's County",
@@ -6203,7 +6203,7 @@
   },
   {
     "id": "19731-PART-01",
-    "name": "Ark of Grace Mission, Inc : Ark of Grace Mission, Inc",
+    "name": "Ark of Grace Mission, Inc",
     "address": "Ark of Grace Mission, Inc 3311 Brightseat Road  Lanham MD 20706",
     "phone": "(240) 535-7832",
     "region": "MD Prince George's County",
@@ -6232,7 +6232,7 @@
   },
   {
     "id": "19857-PART-01",
-    "name": "Faith Village of Greater Laurel, Inc. : Faith Village of Greater Laurel, Inc.",
+    "name": "Faith Village of Greater Laurel, Inc.",
     "address": "Attn: Faith Village of Greater Laurel, Inc. 13714 Briarwood Drive  Laurel MD 20708",
     "phone": "",
     "region": "MD Prince George's County",
@@ -6300,7 +6300,7 @@
   },
   {
     "id": "19143-PART-01",
-    "name": "Woodbridge Workers : Woodbridge Workers",
+    "name": "Woodbridge Workers",
     "address": "Attn: Woodbridge Workers 13950 Jefferson Davis Highway Woodbridge VA 22193",
     "phone": "(703) 969-0197",
     "region": "VA Prince William County",
@@ -6335,7 +6335,7 @@
   },
   {
     "id": "19623-PART-01",
-    "name": "Iglesia De Dios Pentecostal Nuevo Renacer : Iglesia De Dios Pentecostal Nuevo Renacer",
+    "name": "Iglesia De Dios Pentecostal Nuevo Renacer",
     "address": "Jose Morales 490 Victoria Court Millersville MD 21108",
     "phone": "",
     "region": "MD Prince George's County",
@@ -6362,7 +6362,7 @@
   },
   {
     "id": "19624-PART-01",
-    "name": "Calvary Pentecostal Ministries : Calvary Pentecostal Ministries",
+    "name": "Calvary Pentecostal Ministries",
     "address": "Attn: Calvary Pentecostal Ministries 7910 Cessna Avenue Gaithersburg MD 20879",
     "phone": "(301) 775-0404",
     "region": "MD Montgomery County",
@@ -6391,7 +6391,7 @@
   },
   {
     "id": "19627-PART-01",
-    "name": "Yad Yehuda of Greater Washington : Yad Yehuda of Greater Washington",
+    "name": "Yad Yehuda of Greater Washington",
     "address": "Attn: Yad Yehuda of Greater Washington 9601 Colesville Rd Silver Spring MD 20902",
     "phone": "(301) 842-7135",
     "region": "MD Montgomery County",
@@ -6431,7 +6431,7 @@
   },
   {
     "id": "19601-PART-01",
-    "name": "Silver Spring Christian Reformed Church : Silver Spring Christian Reformed Church",
+    "name": "Silver Spring Christian Reformed Church",
     "address": "Attn: Silver Spring Christian Reformed Church 1501 Arcola Ave Silver Spring MD 20902",
     "phone": "(301) 284-8401",
     "region": "MD Montgomery County",
@@ -6459,7 +6459,7 @@
   },
   {
     "id": "19630-PART-01",
-    "name": "Messiah United Methodist Church : Messiah United Methodist Church",
+    "name": "Messiah United Methodist Church",
     "address": "Attn: Messiah United Methodist Church 6215 Rolling Road  Springfield   VA 22152",
     "phone": "(703) 927-7913",
     "region": "VA Fairfax County",
@@ -6486,7 +6486,7 @@
   },
   {
     "id": "19647-PART-01",
-    "name": "Kitchen of Purpose : Kitchen of Purpose",
+    "name": "Kitchen of Purpose",
     "address": "Attn: Kitchen of Purpose 918 S. Lincoln St Suite 2 Arlington VA 22204",
     "phone": "(703) 574-1058",
     "region": "VA Arlington County",
@@ -6517,7 +6517,7 @@
   },
   {
     "id": "19658-PART-01",
-    "name": "Nourish Now : Nourish Now",
+    "name": "Nourish Now",
     "address": "Attn: Nourish Now 397 EAST GUDE DR Rockville MD 20850",
     "phone": "(240) 750-0747",
     "region": "MD Montgomery County",
@@ -6554,7 +6554,7 @@
   },
   {
     "id": "19676-PART-01",
-    "name": "Calvary Christian Church : Calvary Christian Church",
+    "name": "Calvary Christian Church",
     "address": "Attn: Calvary Christian Church 9800 Old Keene Mill Road  Burke  VA 22015",
     "phone": "(571) 212-3922",
     "region": "VA Fairfax County",
@@ -6583,7 +6583,7 @@
   },
   {
     "id": "19691-PART-01",
-    "name": "Muslim Community Center : Muslim Community Center",
+    "name": "Muslim Community Center",
     "address": "Attn: Muslim Community Center 15200 New Hampshire Ave. Silver Spring MD 20905",
     "phone": "(240) 784-0051",
     "region": "MD Montgomery County",
@@ -6619,7 +6619,7 @@
   },
   {
     "id": "19692-PART-01",
-    "name": "Helping Hungry Kids of NOVA : Helping Hungry Kids of NOVA",
+    "name": "Helping Hungry Kids of NOVA",
     "address": "Attn: Northern Virginia Hebrew Congregation 1441 Wiehle Ave Reston VA 20190",
     "phone": "(703) 477-0367",
     "region": "VA Fairfax County",
@@ -6644,7 +6644,7 @@
   },
   {
     "id": "19462-PART-01",
-    "name": "Grace of God Ministry : Grace of God Ministry",
+    "name": "Grace of God Ministry",
     "address": "Attn: Grace of God Ministry 3950 48th Street Bladensburg MD 20710",
     "phone": "(240) 274-2829",
     "region": "MD Prince George's County",
@@ -6744,7 +6744,7 @@
   },
   {
     "id": "19548-PART-01",
-    "name": "Laurel Advocacy & Referral Services, Inc. : Laurel Advocacy & Referral Services, Inc.",
+    "name": "Laurel Advocacy & Referral Services, Inc.",
     "address": "Attn: Laurel Advocacy & Referral Services, Inc. 311 Laurel Ave Laurel MD 20707",
     "phone": "(301) 776-0442",
     "region": "MD Prince George's County",
@@ -6824,7 +6824,7 @@
   },
   {
     "id": "19507-PART-01",
-    "name": "Haymarket Regional Food Pantry : Haymarket Regional Food Pantry",
+    "name": "Haymarket Regional Food Pantry",
     "address": "Attn: Haymarket Regional Food Pantry 7669 Limestone Drive Gainesville VA 20155",
     "phone": "(703) 795-4892",
     "region": "VA Prince William County",
@@ -6863,7 +6863,7 @@
   },
   {
     "id": "19508-PART-01",
-    "name": "Educare Support Services : Educare Support Services",
+    "name": "Educare Support Services",
     "address": "Attn: Educare Support Services 7001 New Hampshire Ave Takoma Park MD 20912",
     "phone": "(240) 450-2092",
     "region": "MD Montgomery County",
@@ -6907,7 +6907,7 @@
   },
   {
     "id": "19467-PART-01",
-    "name": "House of Mercy : House of Mercy",
+    "name": "House of Mercy",
     "address": "Attn: House of Mercy 8170 Flannery Court Manassas VA 20109",
     "phone": "(703) 579-0279",
     "region": "VA Prince William County",
@@ -6947,7 +6947,7 @@
   },
   {
     "id": "19477-PART-01",
-    "name": "Maryland Umbrella Group : Maryland Umbrella Group",
+    "name": "Maryland Umbrella Group",
     "address": "Attn: Maryland Umbrella Group 408 Addison Road South Seat Pleasant MD 20743",
     "phone": "(301) 219-6650",
     "region": "MD Prince George's County",
@@ -6986,7 +6986,7 @@
   },
   {
     "id": "19740-PART-01",
-    "name": "St. Mark The Evangelist Catholic Church : St. Mark The Evangelist Catholic Church",
+    "name": "St. Mark The Evangelist Catholic Church",
     "address": "Attn: St. Mark The Evangelist Catholic Church 7501 Adelphi Road Hyattsville MD 20783",
     "phone": "(301) 852-3816",
     "region": "MD Prince George's County",
@@ -7022,7 +7022,7 @@
   },
   {
     "id": "19751-PART-01",
-    "name": "Community of Faith United Methodist Church : Community of Faith United Methodist Church",
+    "name": "Community of Faith United Methodist Church",
     "address": "Attn: Community of Faith United Methodist Church 13224 Franklin Farm Rd Herndon VA 20171",
     "phone": "(703) 620-1977",
     "region": "VA Fairfax County",
@@ -7055,7 +7055,7 @@
   },
   {
     "id": "19752-PART-01",
-    "name": "ICNA Relief USA Programs Inc. : ICNA Relief USA Programs Inc.",
+    "name": "ICNA Relief USA Programs Inc.",
     "address": "Attn: ICNA RELIEF USA PROGRAM INC 2912 WOODLAWN TRAIL ALEXANDRIA VA 22306",
     "phone": "(571) 662-0786",
     "region": "VA Fairfax County",
@@ -7096,7 +7096,7 @@
   },
   {
     "id": "19757-PART-01",
-    "name": "Freedom Community Church : Freedom Community Church",
+    "name": "Freedom Community Church",
     "address": "Attn: Freedom Community Church 9325 Mace Street Manassas Park VA 20111",
     "phone": "(571) 409-4892",
     "region": "VA Prince William County",
@@ -7127,7 +7127,7 @@
   },
   {
     "id": "19758-PART-01",
-    "name": "Ebenezer Baptist Church : Ebenezer Baptist Church",
+    "name": "Ebenezer Baptist Church",
     "address": "Attn: Ebenezer Baptist Church 13020 Telegraph Road Woodbridge VA 22192",
     "phone": "(703) 376-1664",
     "region": "VA Prince William County",
@@ -7164,7 +7164,7 @@
   },
   {
     "id": "19761-PART-01",
-    "name": "Salvation Army (Fairfax) : Salvation Army (Fairfax)",
+    "name": "Salvation Army (Fairfax)",
     "address": "Attn: Salvation Army (Fairfax) 4915 Ox Road Fairfax VA 22030",
     "phone": "(703) 385-8700",
     "region": "VA Fairfax County",
@@ -7207,7 +7207,7 @@
   },
   {
     "id": "19854-PART-01",
-    "name": "Living Legends Awards for Service to Humanity : Living Legends Awards for Service to Humanity",
+    "name": "Living Legends Awards for Service to Humanity",
     "address": "Attn: Living Legends Awards for Service to Humanity 18800 New Hampshire Avenue Ashton MD 20861",
     "phone": "(240) 832-1039",
     "region": "MD Montgomery County",
@@ -7239,7 +7239,7 @@
   },
   {
     "id": "19283-PART-01",
-    "name": "Ebenezer We Care We Share Community : Ebenezer We Care We Share Community",
+    "name": "Ebenezer We Care We Share Community",
     "address": "Attn: Ebenezer We Care We Share Community 6016 Princess Garden Parkway New Carrollton MD 20784",
     "phone": "(301) 577-7436",
     "region": "MD Prince George's County",
@@ -7268,7 +7268,7 @@
   },
   {
     "id": "19290-PART-01",
-    "name": "Shiloh Church Of God 7 Day : Shiloh Church Of God 7 Day",
+    "name": "Shiloh Church Of God 7 Day",
     "address": "Attn: Shiloh Church Of God 7 Day 5701 Eastern Ave Hyattsville MD 20781",
     "phone": "(443) 531-1955",
     "region": "MD Prince George's County",
@@ -7299,7 +7299,7 @@
   },
   {
     "id": "19295-PART-01",
-    "name": "Metropolis Club : Metropolis Club",
+    "name": "Metropolis Club",
     "address": "Attn: Metropolis Club 938 Rhode Island Ave NE Washington DC 20018",
     "phone": "(301) 793-4236",
     "region": "DC Ward 5",
@@ -7335,7 +7335,7 @@
   },
   {
     "id": "19318-PART-01",
-    "name": "Builders, Inc : Builders, Inc",
+    "name": "Builders, Inc",
     "address": "Attn: Builders, Inc 5135 Marlboro Pike Capitol Heights MD 20743",
     "phone": "(202) 460-8011",
     "region": "MD Prince George's County",
@@ -7368,7 +7368,7 @@
   },
   {
     "id": "19786-PART-01",
-    "name": "Plenty to Eat : Plenty to Eat",
+    "name": "Plenty to Eat",
     "address": "Attn: Plenty to Eat 2315 18th Place NE Washington DC 20018",
     "phone": "(202) 556-0662",
     "region": "DC Ward 5",
@@ -7401,7 +7401,7 @@
   },
   {
     "id": "19787-PART-01",
-    "name": "First African Methodist Episcopal Church of Alexandria : First African Methodist Episcopal Church of Alexandria",
+    "name": "First African Methodist Episcopal Church of Alexandria",
     "address": "Attn: First African Methodist Episcopal Church of Alexandria 8653 Richmond Highway Alexandria VA 22309",
     "phone": "(571) 758-9141",
     "region": "VA Fairfax County",
@@ -7461,7 +7461,7 @@
   },
   {
     "id": "19792-PART-01",
-    "name": "Holy Mountain International Ministries : Holy Mountain International Ministries",
+    "name": "Holy Mountain International Ministries",
     "address": "Attn: DR. BAMIDELE BELLO Holy Mountain International Ministries 6721 Mid Cities Avenue Beltsville MD 20705",
     "phone": "(443) 367-1951",
     "region": "MD Prince George's County",
@@ -7540,7 +7540,7 @@
   },
   {
     "id": "19809-PART-01",
-    "name": "First African Methodist Episcopal Church of Gaithersburg : First African Methodist Episcopal Church of Gaithersburg",
+    "name": "First African Methodist Episcopal Church of Gaithersburg",
     "address": "Attn: First African Methodist Episcopal Church of Gaithersburg 17620 Washington Grove Lane Gaithersburg MD 20877",
     "phone": "(240) 632-9760",
     "region": "MD Montgomery County",
@@ -7573,7 +7573,7 @@
   },
   {
     "id": "19810-PART-01",
-    "name": "Ebenezer AME Church : Ebenezer AME Church",
+    "name": "Ebenezer AME Church",
     "address": "Attn: Ebenezer AME Church 7703 Allentown Road Fort Washington MD 20744",
     "phone": "",
     "region": "MD Prince George's County",
@@ -7609,7 +7609,7 @@
   },
   {
     "id": "19815-PART-01",
-    "name": "Harvest Gleaners : Harvest Gleaners",
+    "name": "Harvest Gleaners",
     "address": "Attn: Harvest Gleaners 3210 Norbeck Road Silver Spring MD 20906",
     "phone": "(301) 503-7397",
     "region": "MD Montgomery County",
@@ -7640,7 +7640,7 @@
   },
   {
     "id": "19830-PART-01",
-    "name": "Community Health Foundation : Community Health Foundation",
+    "name": "Community Health Foundation",
     "address": "Attn: Community Health Foundation 9150 Lanham Severn Rd.  Lanham MD 20706",
     "phone": "(240) 353-1699",
     "region": "MD Prince George's County",
@@ -7671,7 +7671,7 @@
   },
   {
     "id": "19833-PART-01",
-    "name": "The Sanctuary : The Sanctuary",
+    "name": "The Sanctuary",
     "address": "Attn: The Sanctuary 5300 Crain Highway Upper Marlboro MD 20772",
     "phone": "(301) 752-0778",
     "region": "MD Prince George's County",
@@ -7706,7 +7706,7 @@
   },
   {
     "id": "19841-PART-01",
-    "name": "South Lakes High School PTSA Food Pantry : South Lakes High School PTSA Food Pantry : South Lakes High School PTSA Food Pantry",
+    "name": "South Lakes High School PTSA Food Pantry",
     "address": "Attn: Good Shepherd Lutheran Church 1133 Reston AVE Herndon VA 20170",
     "phone": "(703) 216-6928",
     "region": "VA Fairfax County",
@@ -7743,7 +7743,7 @@
   },
   {
     "id": "19844-PART-01",
-    "name": "Lifehouse Church : Lifehouse Church",
+    "name": "Lifehouse Church",
     "address": "Attn: Lifehouse Church 12304 Baltimore Avenue Beltsville MD 20705",
     "phone": "(301) 787-4070",
     "region": "MD Prince George's County",
@@ -7771,7 +7771,7 @@
   },
   {
     "id": "19845-PART-01",
-    "name": "First Baptist Church of Highland Park : First Baptist Church of Highland Park",
+    "name": "First Baptist Church of Highland Park",
     "address": "Attn: First Baptist Church of Highland Park 6801 Sheriff Road Landover MD 20785",
     "phone": "(301) 773-6655",
     "region": "MD Prince George's County",
@@ -7809,7 +7809,7 @@
   },
   {
     "id": "19849-PART-01",
-    "name": "Alexander Memorial Baptist Church : Alexander Memorial Baptist Church",
+    "name": "Alexander Memorial Baptist Church",
     "address": "Attn: Alexander Memorial Baptist Church 10675 Crain Highway Upper Marlboro MD 20772",
     "phone": "(240) 601-0247",
     "region": "MD Prince George's County",
@@ -7878,7 +7878,7 @@
   },
   {
     "id": "19855-PART-01",
-    "name": "Mollemm Food Pantry : Mollemm Food Pantry",
+    "name": "Mollemm Food Pantry",
     "address": "Attn: Mollemm Food Pantry 9721 Good Luck Road Lanham MD 20706",
     "phone": "(301) 248-7742",
     "region": "MD Prince George's County",
@@ -7997,7 +7997,7 @@
   },
   {
     "id": "18762-PART-01",
-    "name": "Rainbow Community Development Center : Rainbow Community Development Center",
+    "name": "Rainbow Community Development Center",
     "address": "Attn: Rainbow Community Development Center 2120 Industrial Parkway A Silver Spring MD 20904",
     "phone": "(301) 625-2561",
     "region": "MD Montgomery County",
@@ -8038,7 +8038,7 @@
   },
   {
     "id": "19035-PART-01",
-    "name": "Edward C Mazique Child Care Center : Edward C Mazique Child Care Center",
+    "name": "Edward C Mazique Child Care Center",
     "address": "Attn: Edward C Mazique Child Care Center 1719 13th St NW Washington DC 20009",
     "phone": "(202) 462-3375",
     "region": "DC Ward 2",
@@ -8082,7 +8082,7 @@
   },
   {
     "id": "19062-PART-01",
-    "name": "Saint Benedict The Moor : Saint Benedict The Moor",
+    "name": "Saint Benedict The Moor",
     "address": "Attn: Saint Benedict The Moor 320 21st Street NE Washington DC 20002",
     "phone": "",
     "region": "DC Ward 7",
@@ -8113,7 +8113,7 @@
   },
   {
     "id": "19076-PART-01",
-    "name": "Greater New Hope Baptist Church : Greater New Hope Baptist Church",
+    "name": "Greater New Hope Baptist Church",
     "address": "Attn: Greater New Hope Baptist Church 816 8th STREET NW Washington DC 20001",
     "phone": "(301) 357-4905",
     "region": "DC Ward 2",
@@ -8146,7 +8146,7 @@
   },
   {
     "id": "15095-PART-01",
-    "name": "Dupont Park SDA Church : Dupont Park SDA Church",
+    "name": "Dupont Park SDA Church",
     "address": "Attn: Dupont Park SDA Church 3942 Alabama Ave SE Washington DC 20019",
     "phone": "(301) 980-6274",
     "region": "DC Ward 7",
@@ -8177,7 +8177,7 @@
   },
   {
     "id": "19859-PART-01",
-    "name": "Hughes United Methodist Church : Hughes United Methodist Church",
+    "name": "Hughes United Methodist Church",
     "address": "Attn: Hughes United Methodist Church 10700 Georgia Ave Wheaton  MD 20902",
     "phone": "(301) 949-8383",
     "region": "MD Montgomery County",
@@ -8220,7 +8220,7 @@
   },
   {
     "id": "19868-PART-01",
-    "name": "InterFaith Works : InterFaith Works",
+    "name": "InterFaith Works",
     "address": "Attn: InterFaith Works 751 Twinbrook Parkway Rockville MD 20851",
     "phone": "(240) 370-4984",
     "region": "MD Montgomery County",
@@ -8330,7 +8330,7 @@
   },
   {
     "id": "22053-PART-01",
-    "name": "Walker Memorial Baptist Church : Walker Memorial Baptist Church",
+    "name": "Walker Memorial Baptist Church",
     "address": "Attn: Walker Memorial Baptist Church 2020 13th St. NW Washington DC 20009",
     "phone": "(202) 232-1120",
     "region": "DC Ward 1",
@@ -8361,7 +8361,7 @@
   },
   {
     "id": "21762-PART-01",
-    "name": "Small Things Matter, Inc : Small Things Matter, Inc",
+    "name": "Small Things Matter, Inc",
     "address": "Attn: Takoma Park / Silver Spring Co-op 201 Ethan Allen Avenue Takoma Park MD 20912",
     "phone": "(202) 669-8550",
     "region": "MD Montgomery County",
@@ -8405,7 +8405,7 @@
   },
   {
     "id": "21894-PART-01",
-    "name": "The House, Inc. : The House, Inc.",
+    "name": "The House, Inc.",
     "address": "Attn: The House, Inc. 14000 Crown Court Woodbridge VA 22193",
     "phone": "(571) 237-5860",
     "region": "VA Prince William County",
@@ -8446,7 +8446,7 @@
   },
   {
     "id": "21906-PART-01",
-    "name": "YWCA National Capital Area : YWCA National Capital Area",
+    "name": "YWCA National Capital Area",
     "address": "Attn: YWCA National Capital Area 2303 14th Street NW Suite 100 Washington DC 20009",
     "phone": "(202) 626-0700",
     "region": "DC Ward 1",
@@ -8478,7 +8478,7 @@
   },
   {
     "id": "22050-PART-01",
-    "name": "Francis On The Hill : Francis On The Hill",
+    "name": "Francis On The Hill",
     "address": "Attn: Francis on the Hill 1614 Manchester Lane NW Washington DC 20011-2810",
     "phone": "(202) 680-0517",
     "region": "DC Ward 4",
@@ -8507,7 +8507,7 @@
   },
   {
     "id": "22119-PART-01",
-    "name": "Covenant House Greater Washington : Covenant House Greater Washington",
+    "name": "Covenant House Greater Washington",
     "address": "Attn: Covenant House Greater Washington 2001 Mississippi Ave SE Washington DC 20020",
     "phone": "(202) 247-0747",
     "region": "DC Ward 8",
@@ -8542,7 +8542,7 @@
   },
   {
     "id": "22177-PART-01",
-    "name": "Luther Jackson Middle School Food Pantry : Luther Jackson Middle School Food Pantry",
+    "name": "Luther Jackson Middle School Food Pantry",
     "address": "Attn: Luther Jackson Middle School Food Pantry 3020 Gallows Road Falls Church VA 22042",
     "phone": "(202) 669-2543",
     "region": "VA Fairfax County",
@@ -8575,7 +8575,7 @@
   },
   {
     "id": "22203-PART-01",
-    "name": "Emmanuel Baptist Church : Emmanuel Baptist Church",
+    "name": "Emmanuel Baptist Church",
     "address": "Attn: Emmanuel Baptist Church 2409 Ainger Place SE Washington DC 20020",
     "phone": "(202) 678-0884",
     "region": "DC Ward 8",
@@ -8606,7 +8606,7 @@
   },
   {
     "id": "22249-PART-01",
-    "name": "Buddhist Tzu Chi Foundation : Buddhist Tzu Chi Foundation",
+    "name": "Buddhist Tzu Chi Foundation",
     "address": "Attn: Buddhist Tzu Chi Foundation 1516 Moorings Drive Reston VA 20190",
     "phone": "(804) 306-6037",
     "region": "VA Fairfax County",
@@ -8643,7 +8643,7 @@
   },
   {
     "id": "22308-PART-01",
-    "name": "LindaBen Foundation : LindaBen Foundation",
+    "name": "LindaBen Foundation",
     "address": "Attn: LindaBen Foundation 10739 Tucker St.  Beltsville  MD 20705",
     "phone": "(240) 461-9442",
     "region": "MD Prince George's County",
@@ -8681,7 +8681,7 @@
   },
   {
     "id": "22443-PART-01",
-    "name": "Tommy's Pantry : Tommy's Pantry",
+    "name": "Tommy's Pantry",
     "address": "Attn: Tommy's Pantry 630 Silver Spring Ave. Silver Spring MD 20910",
     "phone": "(202) 262-4537",
     "region": "MD Montgomery County",
@@ -8710,7 +8710,7 @@
   },
   {
     "id": "22457-PART-01",
-    "name": "Mid-County Hub at Harvest Intercontinental Church Olney : Mid-County Hub at Harvest Intercontinental Church Olney",
+    "name": "Mid-County Hub at Harvest Intercontinental Church Olney",
     "address": "Attn: Harvest Intercontinental Church 16227 Batchellors Forest Rd Olney MD 20832",
     "phone": "(301) 512-5584",
     "region": "MD Montgomery County",
@@ -8754,7 +8754,7 @@
   },
   {
     "id": "22458-PART-01",
-    "name": "Destiny Driven : Destiny Driven",
+    "name": "Destiny Driven",
     "address": "Attn: Destiny Driven 5900 Princess Garden Parkway Lanham  MD 20706",
     "phone": "(301) 455-5970",
     "region": "MD Prince George's County",
@@ -8795,7 +8795,7 @@
   },
   {
     "id": "22468-PART-01",
-    "name": "Largo Community Church : Largo Community Church",
+    "name": "Largo Community Church",
     "address": "Attn: Largo Community Church 1701 Enterprise Road Mitchellville MD 20721",
     "phone": "(301) 249-2255",
     "region": "MD Prince George's County",
@@ -8827,7 +8827,7 @@
   },
   {
     "id": "22650-PART-01",
-    "name": "Christ4Crisis : Christ4Crisis",
+    "name": "Christ4Crisis",
     "address": "Attn: Christ4Crisis 14339 Richmond high way Woodbridge  VA 22191",
     "phone": "(571) 398-7826",
     "region": "VA Prince William County",
@@ -8854,7 +8854,7 @@
   },
   {
     "id": "16175-PART-01",
-    "name": "ISKCON of Washington : ISKCON of Washington",
+    "name": "ISKCON of Washington",
     "address": "Attn: ISKCON of Washington 10310 Oaklyn Dr Potomac MD 20854",
     "phone": "(240) 277-2221",
     "region": "MD Montgomery County",
@@ -8938,7 +8938,7 @@
   },
   {
     "id": "16490-PART-01",
-    "name": "St. Michael and All Angels : St. Michael and All Angels",
+    "name": "St. Michael and All Angels",
     "address": "Attn: St. Michael and All Angels 8501 New Hampshire Ave  Adelphi MD  20783",
     "phone": "(240) 882-0274",
     "region": "MD Prince George's County",
@@ -8973,7 +8973,7 @@
   },
   {
     "id": "16505-PART-01",
-    "name": "City of Praise Family Ministries : City of Praise Family Ministries",
+    "name": "City of Praise Family Ministries",
     "address": "Attn: City of Praise Family Ministries 8806 Brightseat Road Landover MD 20785",
     "phone": "(301) 404-8234",
     "region": "MD Prince George's County",
@@ -9014,7 +9014,7 @@
   },
   {
     "id": "16566-PART-01",
-    "name": "Ebenezer Church of God : Ebenezer Church of God",
+    "name": "Ebenezer Church of God",
     "address": "Attn: Ebenezer Church of God 7550 Buchanan St. Hyattsville MD 20784",
     "phone": "",
     "region": "MD Prince George's County",
@@ -9053,7 +9053,7 @@
   },
   {
     "id": "15530-PART-01",
-    "name": "Arlington Bridge Builders : Arlington Bridge Builders",
+    "name": "Arlington Bridge Builders",
     "address": "Attn: Arlington Bridge Builders 790 South Carlin Springs Road Arlington VA 22204",
     "phone": "(571) 282-5156",
     "region": "VA Fairfax County",
@@ -9088,7 +9088,7 @@
   },
   {
     "id": "15620-PART-01",
-    "name": "Grace Episcopal Church : Grace Episcopal Church",
+    "name": "Grace Episcopal Church",
     "address": "Attn: Grace Episcopal Church 3601 Russell Road Alexandria VA 22305",
     "phone": "(703) 549-1980",
     "region": "VA City of Alexandria",
@@ -9120,7 +9120,7 @@
   },
   {
     "id": "15990-PART-01",
-    "name": "DC Central Kitchen : DC Central Kitchen",
+    "name": "DC Central Kitchen",
     "address": "Attn: DC Central Kitchen 2121 1st Street SW Washington DC 20024",
     "phone": "(202) 400-2806",
     "region": "DC Ward 6",
@@ -9157,7 +9157,7 @@
   },
   {
     "id": "16011-PART-01",
-    "name": "North Capitol Collaborative, Inc. : North Capitol Collaborative, Inc.",
+    "name": "North Capitol Collaborative, Inc.",
     "address": "Attn: North Capitol Collaborative, Inc. 3230 Pennsylvania Ave SE #202 Washington DC 20020",
     "phone": "(202) 588-1800",
     "region": "DC Ward 7",
@@ -9192,7 +9192,7 @@
   },
   {
     "id": "14570-PART-01",
-    "name": "ALIVE : ALIVE",
+    "name": "ALIVE",
     "address": "Attn: ALIVE 801 S Payne St Alexandria VA 22302",
     "phone": "(703) 837-9300",
     "region": "VA City of Alexandria",
@@ -9224,7 +9224,7 @@
   },
   {
     "id": "14590-PART-01",
-    "name": "ACTS : ACTS",
+    "name": "ACTS",
     "address": "Attn: ACTS 3901 ACTS Lane Dumfries VA 22026",
     "phone": "(703) 441-8606",
     "region": "VA Prince William County",
@@ -9265,7 +9265,7 @@
   },
   {
     "id": "14755-PART-01",
-    "name": "Latin American Youth Center : Latin American Youth Center",
+    "name": "Latin American Youth Center",
     "address": "Attn: Latin American Youth Center 1419 Columbia Rd NW Washington DC 20009",
     "phone": "(202) 758-7490",
     "region": "DC Ward 1",
@@ -9339,7 +9339,7 @@
   },
   {
     "id": "14040-PART-01",
-    "name": "Community Family Life Services : Community Family Life Services",
+    "name": "Community Family Life Services",
     "address": "Attn: Community Family Life Services 305 E Street NW Washington DC 20001",
     "phone": "(202) 347-0511",
     "region": "DC Ward 6",
@@ -9460,7 +9460,7 @@
   },
   {
     "id": "14215-PART-01",
-    "name": "Metropolitan Baptist Church : Metropolitan Baptist Church",
+    "name": "Metropolitan Baptist Church",
     "address": "Att: Reverend Brenda Girton Mitchell Metropolitan Baptist Church 1200 Mercantile Lane Suite 115B Largo MD 20774",
     "phone": "",
     "region": "MD Prince George's County",
@@ -9535,7 +9535,7 @@
   },
   {
     "id": "14355-PART-01",
-    "name": "Family & Medical Counseling Service : Family & Medical Counseling Service",
+    "name": "Family & Medical Counseling Service",
     "address": "Attn: Family & Medical Counseling Service 2041 MLK Jr. Ave. SE Suite 303 Washington DC 20020",
     "phone": "(202) 889-7900",
     "region": "DC Ward 8",
@@ -9573,7 +9573,7 @@
   },
   {
     "id": "14375-PART-01",
-    "name": "Agape Early Childhood Learning : Agape Early Childhood Learning",
+    "name": "Agape Early Childhood Learning",
     "address": "Attn: Agape Early Childhood Learning 4318 Rhode Island Avenue Brentwood MD 20722",
     "phone": "(301) 927-4674",
     "region": "MD Prince George's County",
@@ -9604,7 +9604,7 @@
   },
   {
     "id": "14410-PART-01",
-    "name": "Spanish Catholic Center : Spanish Catholic Center",
+    "name": "Spanish Catholic Center",
     "address": "Attn: Spanish Catholic Center 1618 Monroe St. NW Washington DC 20010",
     "phone": "",
     "region": "DC Ward 1",
@@ -9651,7 +9651,7 @@
   },
   {
     "id": "14500-PART-01",
-    "name": "Central Union Mission : Central Union Mission",
+    "name": "Central Union Mission",
     "address": "Attn: Central Union Mission 65 Massachusetts Ave Washington DC 20001",
     "phone": "(202) 718-0549",
     "region": "DC Ward 6",
@@ -9699,7 +9699,7 @@
   },
   {
     "id": "14540-PART-01",
-    "name": "Miriam's Kitchen : Miriam's Kitchen",
+    "name": "Miriam's Kitchen",
     "address": "Attn: Miriam's Kitchen 2401 Virginia Ave NW Washington DC 20037",
     "phone": "(240) 350-1058",
     "region": "DC Ward 2",
@@ -9745,7 +9745,7 @@
   },
   {
     "id": "14572-PART-01",
-    "name": "Emmanuel Worship Center Seventh Day Adventist Church : Emmanuel Worship Center Seventh Day Adventist Church",
+    "name": "Emmanuel Worship Center Seventh Day Adventist Church",
     "address": "Attn: Emmanuel Worship Center Seventh Day Adventist Church 8145 Richmond Highway Alexandria VA 22309",
     "phone": "(301) 793-8578",
     "region": "VA Fairfax County",
@@ -9778,7 +9778,7 @@
   },
   {
     "id": "14790-PART-01",
-    "name": "Damien Ministries Food Pantry : Damien Ministries Food Pantry",
+    "name": "Damien Ministries Food Pantry",
     "address": "Attn: Damien Ministries Food Pantry 2200 Rhode Island AVE NE Washington DC 20018",
     "phone": "(202) 526-3020",
     "region": "DC Ward 5",
@@ -9916,7 +9916,7 @@
   },
   {
     "id": "15135-PART-01",
-    "name": "Sixth Church Food Closet : Sixth Church Food Closet",
+    "name": "Sixth Church Food Closet",
     "address": "Attn: Sixth Church Food Closet 5413 16th St  NW Washington DC 20011",
     "phone": "(202) 723-5377",
     "region": "DC Ward 4",
@@ -9981,7 +9981,7 @@
   },
   {
     "id": "15980-PART-01",
-    "name": "Paramount Baptist Church : Paramount Baptist Church",
+    "name": "Paramount Baptist Church",
     "address": "Attn: Paramount Baptist Church 3924 4th St SE Washington DC 20032",
     "phone": "(202) 562-6339",
     "region": "DC Ward 8",
@@ -10014,7 +10014,7 @@
   },
   {
     "id": "16730-PART-01",
-    "name": "Northeastern Presbyterian Church : Northeastern Presbyterian Church",
+    "name": "Northeastern Presbyterian Church",
     "address": "Attn: Northeastern Presbyterian Church 2112 Varnum St. NE Washington DC 20018",
     "phone": "(202) 316-8744",
     "region": "DC Ward 5",
@@ -10041,7 +10041,7 @@
   },
   {
     "id": "16960-PART-01",
-    "name": "Southern Friendship Missionary Baptist Church : Southern Friendship Missionary Baptist Church",
+    "name": "Southern Friendship Missionary Baptist Church",
     "address": "Attn: Southern Friendship Missionary Baptist Church 4444 Branch Avenue Temple Hills MD 20748",
     "phone": "(301) 523-6090",
     "region": "MD Prince George's County",
@@ -10073,7 +10073,7 @@
   },
   {
     "id": "17065-PART-01",
-    "name": "Faith Temple #2 : Faith Temple #2",
+    "name": "Faith Temple #2",
     "address": "Attn: Faith Temple #2 211 Maryland Park Drive Capitol Heights MD 20743",
     "phone": "(301) 655-1722",
     "region": "MD Prince George's County",
@@ -10133,7 +10133,7 @@
   },
   {
     "id": "18706-PART-01",
-    "name": "Freedom Way Missionary Baptist Church : Freedom Way Missionary Baptist Church",
+    "name": "Freedom Way Missionary Baptist Church",
     "address": "Attn: Freedom Way Missionary Baptist Church 1266 Benning Road Capitol Heights MD 20743",
     "phone": "(301) 807-6912",
     "region": "MD Prince George's County",
@@ -10164,7 +10164,7 @@
   },
   {
     "id": "18756-PART-04",
-    "name": "Shepherd's Table - Progress Place Building : Shepherd's Table - Progress Place Building",
+    "name": "Shepherd's Table - Progress Place Building",
     "address": "Attn: Shepherd's Table - Progress Place Building 8106 Georgia Avenue Silver Springs MD 20910",
     "phone": "(301) 585-6463",
     "region": "MD Montgomery County",
@@ -10281,7 +10281,7 @@
   },
   {
     "id": "19231-PART-01",
-    "name": "The Lord's Chosen Food Pantry : The Lord's Chosen Food Pantry",
+    "name": "The Lord's Chosen Food Pantry",
     "address": "Attn: The Lord's Chosen Food Pantry 1302 Cronson Blvd Crofton MD 21114",
     "phone": "(301) 773-7573",
     "region": "MD Prince George's County",
@@ -10312,7 +10312,7 @@
   },
   {
     "id": "19428-PART-01",
-    "name": "Whosoever Will Christian Church : Whosoever Will Christian Church",
+    "name": "Whosoever Will Christian Church",
     "address": "Attn: Whosoever Will Christian Church 4514 Sellman Road Beltsville MD 20705",
     "phone": "(301) 257-2264",
     "region": "MD Prince George's County",
@@ -10345,7 +10345,7 @@
   },
   {
     "id": "19483-PART-01",
-    "name": "Women Who Care Ministries : Women Who Care Ministries",
+    "name": "Women Who Care Ministries",
     "address": "Attn: Women Who Care Ministries 19640 Club House Road Suite 410 Montgomery Villlage MD 20886",
     "phone": "(301) 828-6850",
     "region": "MD Montgomery County",
@@ -10420,7 +10420,7 @@
   },
   {
     "id": "19565-PART-01",
-    "name": "Temple of Praise : Temple of Praise",
+    "name": "Temple of Praise",
     "address": "Attn: Temple of Praise 700 Southern Avenue SE Washington DC 20032",
     "phone": "(301) 537-3445",
     "region": "DC Ward 8",
@@ -10445,7 +10445,7 @@
   },
   {
     "id": "19593-PART-01",
-    "name": "River Jordan, Inc. : River Jordan, Inc.",
+    "name": "River Jordan, Inc.",
     "address": "Attn: River Jordan, Inc. 15809 Livingston Road Accokeek MD 20607",
     "phone": "(301) 873-8704",
     "region": "MD Prince George's County",
@@ -10474,7 +10474,7 @@
   },
   {
     "id": "19617-PART-01",
-    "name": "Zion Church Inc. : Zion Church Inc.",
+    "name": "Zion Church Inc.",
     "address": "Attn: Zion Church Inc. 8829 Greenbelt Rd  Greenbelt MD 20770",
     "phone": "(301) 633-9592",
     "region": "MD Prince George's County",
@@ -10505,7 +10505,7 @@
   },
   {
     "id": "19645-PART-01",
-    "name": "ADAMS CENTER : ADAMS CENTER",
+    "name": "ADAMS CENTER",
     "address": "Attn: ADAMS CENTER 46903 Sugarland Road Sterling VA 20164",
     "phone": "(703) 501-7990",
     "region": "**Outside CAFB Service Area**",
@@ -10548,7 +10548,7 @@
   },
   {
     "id": "19654-PART-01",
-    "name": "The St. Lucy Project : The St. Lucy Project",
+    "name": "The St. Lucy Project",
     "address": "Attn: The St. Lucy Project 8426-28 Kao Circle Manassas VA 20110",
     "phone": "(703) 991-6940",
     "region": "VA Manassas City",
@@ -10590,7 +10590,7 @@
   },
   {
     "id": "19698-PART-01",
-    "name": "Good Success Christian Church : Good Success Christian Church",
+    "name": "Good Success Christian Church",
     "address": "Attn: Good Success Christian Church 4401 Sheriff Rd NE Washington DC 20019",
     "phone": "(301) 661-5442",
     "region": "DC Ward 7",
@@ -10626,7 +10626,7 @@
   },
   {
     "id": "19714-PART-01",
-    "name": "Cornerstone Peaceful Bible Baptist Church : Cornerstone Peaceful Bible Baptist Church",
+    "name": "Cornerstone Peaceful Bible Baptist Church",
     "address": "Attn: Cornerstone Peaceful Bible Baptist Church 9010 Frank Tippett Road Upper Marlboro MD 20772",
     "phone": "(240) 346-4169",
     "region": "MD Prince George's County",
@@ -10692,7 +10692,7 @@
   },
   {
     "id": "19725-PART-01",
-    "name": "Our Savior Lutheran Church : Our Savior Lutheran Church",
+    "name": "Our Savior Lutheran Church",
     "address": "Attn: Our Savior Lutheran Church 13611 Laurel Bowie Road Laurel MD 20708",
     "phone": "(240) 462-8809",
     "region": "MD Prince George's County",
@@ -10775,7 +10775,7 @@
   },
   {
     "id": "19737-PART-01",
-    "name": "Resurrection Bible Church : Resurrection Bible Church",
+    "name": "Resurrection Bible Church",
     "address": "Attn: Resurrection Bible Church 10835 Lanham-Severn Road Glenn Dale MD 20769",
     "phone": "(301) 437-4958",
     "region": "MD Prince George's County",
@@ -10802,7 +10802,7 @@
   },
   {
     "id": "19739-PART-01",
-    "name": "Victory Christian Ministries International : Victory Christian Ministries International",
+    "name": "Victory Christian Ministries International",
     "address": "Attn: Victory Christian Ministries International 3911 St Barnabas Road Suitland MD 20746",
     "phone": "(240) 638-6274",
     "region": "MD Prince George's County",
@@ -10836,7 +10836,7 @@
   },
   {
     "id": "19742-PART-01",
-    "name": "Boat People SOS : Boat People SOS",
+    "name": "Boat People SOS",
     "address": "Attn: Boat People SOS 6066 Leesburg Pike Falls Church VA 22041",
     "phone": "(703) 538-2190",
     "region": "VA Fairfax County",
@@ -10871,7 +10871,7 @@
   },
   {
     "id": "19748-PART-01",
-    "name": "Church of the Resurrection : Church of the Resurrection",
+    "name": "Church of the Resurrection",
     "address": "Attn: Church of the Resurrection 5150 Fillmore Ave Alexandria VA 22311",
     "phone": "(703) 998-0888",
     "region": "VA City of Alexandria",
@@ -10904,7 +10904,7 @@
   },
   {
     "id": "19814-PART-01",
-    "name": "ECWA USA Evangelical Church Winning All : ECWA USA Evangelical Church Winning All",
+    "name": "ECWA USA Evangelical Church Winning All",
     "address": "Attn: ECWA USA Evangelical Church Winning All 5526 Marlboro Pike District Heights MD 20747",
     "phone": "(240) 743-6560",
     "region": "MD Prince George's County",
@@ -10931,7 +10931,7 @@
   },
   {
     "id": "19872-PART-01",
-    "name": "Reid Temple AME Church : Reid Temple AME Church",
+    "name": "Reid Temple AME Church",
     "address": "Attn: Reid Temple AME Church 11400 Glenn Dale Blvd Glenn Dale MD 20769",
     "phone": "(443) 474-3673",
     "region": "MD Prince George's County",
@@ -11004,7 +11004,7 @@
   },
   {
     "id": "22120-PART-01",
-    "name": "Columbia Heights Village Tenant Association : Columbia Heights Village Tenant Association",
+    "name": "Columbia Heights Village Tenant Association",
     "address": "Attn: Columbia Heights Village Tenant Association 2900 14th Street NW Suite 110 Washington DC 20009",
     "phone": "(202) 390-8580",
     "region": "DC Ward 1",
@@ -11058,7 +11058,7 @@
   },
   {
     "id": "22685-PART-01",
-    "name": "Gaithersburg Soup Kitchen : Gaithersburg Soup Kitchen",
+    "name": "Gaithersburg Soup Kitchen",
     "address": "Attn: Gaithersburg Community Soup Kitchen 9008 Rosemont Drive Gaithersburg MD 20877",
     "phone": "(301) 926-0424",
     "region": "MD Montgomery County",
@@ -11098,7 +11098,7 @@
   },
   {
     "id": "22687-PART-01",
-    "name": "Centro de Apoyo Familiar (CAF) : Centro de Apoyo Familiar (CAF)",
+    "name": "Centro de Apoyo Familiar (CAF)",
     "address": "Attn: Centro de Apoyo Familiar (CAF) 13923 Minnieville Road  Woodbridge VA 22193",
     "phone": "(301) 328-3292",
     "region": "VA Prince William County",
@@ -11139,7 +11139,7 @@
   },
   {
     "id": "22697-PART-01",
-    "name": "Mount Calvary Baptist Church : Mount Calvary Baptist Church",
+    "name": "Mount Calvary Baptist Church",
     "address": "Carolyn Kennedy Piggott 608 North Horners Lane Rockviille MD 20850",
     "phone": "(240) 351-7992",
     "region": "MD Montgomery County",
@@ -11292,7 +11292,7 @@
   },
   {
     "id": "19808-PART-01",
-    "name": "Tutoring Cafe : Tutoring Cafe",
+    "name": "Tutoring Cafe",
     "address": "Attn: Tutoring CafÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©: Feeding Champions 6906 4th St NW Washington DC 20012",
     "phone": "(240) 601-3312",
     "region": "DC Ward 4",
@@ -11328,7 +11328,7 @@
   },
   {
     "id": "21860-PART-01",
-    "name": "So What Else, Inc : So What Else, Inc",
+    "name": "So What Else, Inc",
     "address": "Megan Joe 4924 wyaconda road  Rockville  MD 20852",
     "phone": "(240) 705-4345",
     "region": "MD Montgomery County",
@@ -11367,7 +11367,7 @@
   },
   {
     "id": "16400-PART-01",
-    "name": "Nick's Place : Nick's Place",
+    "name": "Nick's Place",
     "address": "Attn: Nick's Place 4514 Lincoln Ave Beltsville MD 20705",
     "phone": "(301) 938-5876",
     "region": "MD Prince George's County",
@@ -11391,7 +11391,7 @@
   },
   {
     "id": "19793-PART-01",
-    "name": "Ayuda, Inc. : Ayuda, Inc.",
+    "name": "Ayuda, Inc.",
     "address": "Attn: Ayuda Inc. 1990 K St. NW Suite 500 Washington DC 20006",
     "phone": "(703) 589-4204",
     "region": "DC Ward 2",
@@ -11432,7 +11432,7 @@
   },
   {
     "id": "22288-PART-01",
-    "name": "Mount Olive Baptist Church : Mount Olive Baptist Church",
+    "name": "Mount Olive Baptist Church",
     "address": "Attn: Mount Olive Baptist Church 6600 Old Centerville Rd n/a Centerville VA 20121",
     "phone": "(703) 830-8769",
     "region": "VA Fairfax County",
@@ -11456,7 +11456,7 @@
   },
   {
     "id": "22863-PART-01",
-    "name": "St. John's Community Service Center : St. John's Community Service Center",
+    "name": "St. John's Community Service Center",
     "address": "Attn: St. John's Community Service Center 7611 Little River Turnpike Annandale VA 22003",
     "phone": "(571) 283-9231",
     "region": "VA Fairfax County",
@@ -11485,7 +11485,7 @@
   },
   {
     "id": "22731-PART-01",
-    "name": "CFH Inc. : CFH Inc.",
+    "name": "CFH Inc.",
     "address": "Attn: CFH Inc. 9021 Centreville Road Manassas VA 20110",
     "phone": "(571) 201-6226",
     "region": "VA City of Manassas",
@@ -11517,7 +11517,7 @@
   },
   {
     "id": "22202-PART-01",
-    "name": "First SDA Church : First SDA Church",
+    "name": "First SDA Church",
     "address": "Attn: First S.D.A Church 810 Shepherd ST NW Washington DC 20011",
     "phone": "(202) 997-9663",
     "region": "DC Ward 4",
@@ -11548,7 +11548,7 @@
   },
   {
     "id": "22877-PART-01",
-    "name": "True Ground Housing : True Ground Housing",
+    "name": "True Ground Housing",
     "address": "Attn: True Ground Housing 4318 N Carlin Springs Road Arlington VA 22203",
     "phone": "(571) 733-9627",
     "region": "VA Arlington County",
@@ -11583,7 +11583,7 @@
   },
   {
     "id": "23013-PART-01",
-    "name": "Fairfax Church Resource Center : Fairfax Church Resource Center",
+    "name": "Fairfax Church Resource Center",
     "address": "Attn: Fairfax Church Resource Center 11451 Braddock Road Fairfax VA 22030",
     "phone": "(703) 745-1030",
     "region": "VA Fairfax County",
@@ -11643,7 +11643,7 @@
   },
   {
     "id": "23055-PART-01",
-    "name": "Woodbridge Church of the Nazarene : Woodbridge Church of the Nazarene",
+    "name": "Woodbridge Church of the Nazarene",
     "address": "Attn: Woodbridge Church of the Nazarene 14001 Smoketown Road Woodbridge VA 22193",
     "phone": "(703) 670-2252",
     "region": "VA Prince William County",
@@ -11670,7 +11670,7 @@
   },
   {
     "id": "23030-PART-01",
-    "name": "Living Faith Lutheran Church : Living Faith Lutheran Church",
+    "name": "Living Faith Lutheran Church",
     "address": "Attn: Living Faith Lutheran Church 1605 Veirs Mill Road Rockville MD 20851",
     "phone": "(301) 424-8622",
     "region": "MD Montgomery County",
@@ -11695,7 +11695,7 @@
   },
   {
     "id": "19506-PART-01",
-    "name": "Mid County United Ministries (MUM) : Mid County United Ministries (MUM)",
+    "name": "Mid County United Ministries (MUM)",
     "address": "Attn: Mid County United Ministries (MUM) 11002 Viers Mill Road Suite 710 Wheaton MD 20902",
     "phone": "(202) 368-5466",
     "region": "MD Montgomery County",
@@ -11730,7 +11730,7 @@
   },
   {
     "id": "16330-PART-01",
-    "name": "Greater Refuge Ministries : Greater Refuge Ministries",
+    "name": "Greater Refuge Ministries",
     "address": "Attn: Greater Refuge Ministries 9512 Piscataway Road Clinton MD 20735",
     "phone": "(301) 856-8806",
     "region": "MD Prince George's County",
@@ -11759,7 +11759,7 @@
   },
   {
     "id": "19458-PART-01",
-    "name": "The Hope Center : The Hope Center",
+    "name": "The Hope Center",
     "address": "Attn: The Hope Center 4915 Wheeler Rd Oxon Hill MD 20745",
     "phone": "(410) 877-4444",
     "region": "MD Prince George's County",
@@ -11788,7 +11788,7 @@
   },
   {
     "id": "19799-PART-01",
-    "name": "Iglesia Evangelica Cristo Promesa Fiel : Iglesia Evangelica Cristo Promesa Fiel",
+    "name": "Iglesia Evangelica Cristo Promesa Fiel",
     "address": "Attn: Iglesia Evangelica Cristo Promesa Fiel 17017 Georgia Avenue Olney MD 20832",
     "phone": "(301) 408-8302",
     "region": "MD Montgomery County",
@@ -11819,7 +11819,7 @@
   },
   {
     "id": "23173-PART-01",
-    "name": "DC Doors : DC Doors",
+    "name": "DC Doors",
     "address": "Attn: DC Doors 900 Rhode Island Ave NW Washington DC 20018",
     "phone": "(202) 248-2098",
     "region": "DC Ward 5",
@@ -11852,7 +11852,7 @@
   },
   {
     "id": "19861-PART-01",
-    "name": "St. Philip's Episcopal Church : St. Philip's Episcopal Church",
+    "name": "St. Philip's Episcopal Church",
     "address": "Attn: St. Philip's Episcopal Church 522 Main Street Laurel MD 20707",
     "phone": "(301) 776-5151",
     "region": "MD Prince George's County",
@@ -11883,7 +11883,7 @@
   },
   {
     "id": "19322-PART-01",
-    "name": "Allen Chapel AME Church : Allen Chapel AME Church",
+    "name": "Allen Chapel AME Church",
     "address": "Attn: Allen Chapel AME Church 2498 Alabama Avenue SE Washington DC 20020",
     "phone": "(202) 494-9824",
     "region": "DC Ward 8",
@@ -11911,7 +11911,7 @@
   },
   {
     "id": "19278-PART-01",
-    "name": "First Baptist Church Ken-Gar : First Baptist Church Ken-Gar",
+    "name": "First Baptist Church Ken-Gar",
     "address": "Attn: First Baptist Church Ken-Gar 3922 Hampden St Kensington MD 20895",
     "phone": "(917) 364-1681",
     "region": "MD Montgomery County",
@@ -11944,7 +11944,7 @@
   },
   {
     "id": "19871-PART-01",
-    "name": "Oak Chapel UMC : Oak Chapel UMC",
+    "name": "Oak Chapel UMC",
     "address": "Attn: Oak Chapel UMC 14500 Layhill Road Silver Spring MD 20906",
     "phone": "(240) 277-4426",
     "region": "MD Montgomery County",
@@ -11989,7 +11989,7 @@
   },
   {
     "id": "19606-PART-01",
-    "name": "Revival Baptist Ministries INT : Revival Baptist Ministries INT",
+    "name": "Revival Baptist Ministries INT",
     "address": "Attn: Revival Baptist Ministries INT 8174 Richmond Hwy Alexandria VA 22309",
     "phone": "(703) 944-3057",
     "region": "VA Fairfax County",
@@ -12047,7 +12047,7 @@
   },
   {
     "id": "19519-PART-01",
-    "name": "River of Life Redeemed Christian Church of God : River of Life Redeemed Christian Church of God",
+    "name": "River of Life Redeemed Christian Church of God",
     "address": "Attn: River of Life Redeemed Christian Church of God 5617 54th Ave. Riverdale MD 20737",
     "phone": "(301) 779-4605",
     "region": "MD Prince George's County",
@@ -12072,7 +12072,7 @@
   },
   {
     "id": "19712-PART-01",
-    "name": "First Baptist Church of Silver Spring Food Closet : First Baptist Church of Silver Spring Food Closet",
+    "name": "First Baptist Church of Silver Spring Food Closet",
     "address": "Attn: First Baptist Church of Silver Spring Food Closet 828 Wayne Ave Silver Spring MD 20910",
     "phone": "(301) 466-8263",
     "region": "MD Montgomery County",
@@ -12101,7 +12101,7 @@
   },
   {
     "id": "23200-PART-01",
-    "name": "Holy Family Catholic Church Food Pantry : Holy Family Catholic Church Food Pantry",
+    "name": "Holy Family Catholic Church Food Pantry",
     "address": "Attn: Holy Family Catholic Church Food Pantry 14160 Ferndale Road Dale City VA 22193",
     "phone": "(703) 459-7156",
     "region": "VA Prince William County",
@@ -12129,7 +12129,7 @@
   },
   {
     "id": "23202-PART-01",
-    "name": "Sacred Heart Catholic Church : Sacred Heart Catholic Church",
+    "name": "Sacred Heart Catholic Church",
     "address": "Attn: Sacred Heart Catholic Church 12975 Purcell Road Manassas VA 20112",
     "phone": "(703) 590-0030",
     "region": "VA Prince William County",
@@ -12156,7 +12156,7 @@
   },
   {
     "id": "23204-PART-01",
-    "name": "Manassas Baptist Church : Manassas Baptist Church",
+    "name": "Manassas Baptist Church",
     "address": "Attn: Manassas Baptist Church 8730 Sudley Road Manassas VA 20110",
     "phone": "(703) 361-2146",
     "region": "VA City of Manassas",
@@ -12217,7 +12217,7 @@
   },
   {
     "id": "223241-PART-01",
-    "name": "Love Church : Love Church",
+    "name": "Love Church",
     "address": "Attn: Love Church 14370 Lee Highway Suite 105 Gainesville VA 20155",
     "phone": "",
     "region": "VA Prince William County",
