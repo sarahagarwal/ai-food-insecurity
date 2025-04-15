@@ -49,32 +49,7 @@ export default function MapPage() {
         alignItems: "center",
         gap: "2rem"
       }}>
-        <div style={{
-          textAlign: "center",
-          padding: "3rem",
-          background: "rgba(255, 255, 255, 0.95)",
-          borderRadius: "30px",
-          
-          boxShadow: "0 20px 40px rgba(44, 95, 45, 0.15)",
-          width: "100%",
-          maxWidth: "800px",
-        }}>
-          <h1 style={{
-            fontSize: "2.5rem",
-            fontWeight: "bold",
-            color: "#2c5f2d",
-            marginBottom: "1.5rem"
-          }}>
-            {t("locations.title")}
-          </h1>
-          <p style={{
-            fontSize: "1.25rem",
-            color: "#4b5563",
-            lineHeight: "1.6"
-          }}>
-            {t("locations.description")}
-          </p>
-        </div>
+       
         {/* Map Container */}
         <div style={{
           width: "100%",
