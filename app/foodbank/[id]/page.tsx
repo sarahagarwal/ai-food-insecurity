@@ -1,6 +1,9 @@
 "use client";
 
 import React from "react";
+import { useState, useEffect } from 'react'; 
+import FeedbackForm from "../../../components/FeedbackForm";
+
 import { useParams } from "next/navigation";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
@@ -30,9 +33,13 @@ export default function FoodBankDetailsPage() {
         <main
           style={{
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             height: "80vh",
+            padding: "40px",
+            maxWidth: "900px",
+            margin: "0 auto",
           }}
         >
           <h1 style={{ fontSize: "24px", color: "#ff0000" }}>
@@ -111,7 +118,7 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.address")}
+            {t("Address")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>{foodbank.address}</p>
         </section>
@@ -130,10 +137,10 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.contactInformation")}
+            {t("Contact Information")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>{t("foodbank.phone")}:</strong> {foodbank.phone}
+            <strong>{t("Phone")}:</strong> {foodbank.phone}
           </p>
         </section>
 
@@ -151,13 +158,13 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.generalInformation")}
+            {t("General Information")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>{t("foodbank.region")}:</strong> {foodbank.region}
+            <strong>{t("Region")}:</strong> {foodbank.region}
           </p>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>{t("foodbank.frequency")}:</strong> {foodbank.frequency}
+            <strong>{t("Frequency")}:</strong> {foodbank.frequency}
           </p>
         </section>
 
@@ -175,7 +182,7 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.servicesOffered")}
+            {t("Services Offered")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.services.length > 0
@@ -198,12 +205,12 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.accessibilityOptions")}
+            {t("Accessibility Options")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.accessibilityOptions?.length > 0
               ? foodbank.accessibilityOptions.join(", ")
-              : t("foodbank.noAccessibilityOptionsListed")}
+              : t("No Accessibility Options Listed")}
           </p>
         </section>
 
@@ -221,10 +228,10 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.description")}
+            {t("Description")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            {foodbank.description || t("foodbank.noDescriptionAvailable")}
+            {foodbank.description || t("No Description Available")}
           </p>
         </section>
 
@@ -247,7 +254,7 @@ export default function FoodBankDetailsPage() {
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.hours?.length > 0
               ? foodbank.hours.join(", ")
-              : t("foodbank.noOperatingHoursListed")}
+              : t("No Operating Hours Listed")}
           </p>
         </section>
 
@@ -265,7 +272,7 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            {t("foodbank.location")}
+            {t("Location")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             <a
@@ -280,6 +287,25 @@ export default function FoodBankDetailsPage() {
               {t("foodbank.viewOnGoogleMaps")}
             </a>
           </p>
+        </section>
+
+        {/* Feedback Section - Now moved outside of the not found condition */}
+        <section
+          style={sectionStyle}
+          onMouseOver={handleMouseOver}
+          onMouseOut={handleMouseOut}
+        >
+          <h2
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              color: "#2c5f2d",
+              marginBottom: "10px",
+            }}
+          >
+            🗣️ Leave Feedback
+          </h2>
+          <FeedbackForm foodbankId={foodbank.id} />
         </section>
       </main>
       <Footer />
