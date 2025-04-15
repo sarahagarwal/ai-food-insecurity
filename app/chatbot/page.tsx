@@ -5,13 +5,25 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function ChatbotPage() {
+  // Language state
+  const [language, setLanguage] = useState<string>("english");
+  
+  // Initial welcome messages based on language
+  const welcomeMessages = {
+    english: "Hello! I can help you find food banks in your area. To provide the best recommendations, could you share your location or the area you're looking in?",
+    spanish: "¡Hola! Puedo ayudarte a encontrar bancos de alimentos en tu área. Para darte las mejores recomendaciones, ¿podrías compartir tu ubicación o el área donde estás buscando?"
+  };
+
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([
-    { role: "assistant", content: "Hello! I can help you find food banks in your area. What are you looking for today?" }
+    { role: "assistant", content: welcomeMessages.english }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
+  const [locationPermission, setLocationPermission] = useState<string>("prompt");
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
   const [chatHistory, setChatHistory] = useState<{ role: string; content: string }[]>([]);
+  const [showLanguageSelector, setShowLanguageSelector] = useState<boolean>(true);
 
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
@@ -23,6 +35,119 @@ export default function ChatbotPage() {
     scrollToBottom();
   }, [messages]);
 
+  // Request user location when component mounts
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.permissions.query({ name: 'geolocation' }).then(result => {
+        setLocationPermission(result.state);
+        
+        if (result.state === "granted") {
+          getUserLocation();
+        }
+        
+        result.onchange = function() {
+          setLocationPermission(this.state);
+          if (this.state === "granted") {
+            getUserLocation();
+          }
+        };
+      });
+    }
+  }, []);
+
+  const getUserLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        setUserLocation({ lat: latitude, lng: longitude });
+        
+        // Send location to backend
+        sendLocationToBackend(latitude, longitude);
+        
+        // Add a message to inform user their location is being used
+        const locationMessage = language === "spanish" 
+          ? "He detectado tu ubicación. Usaré esta información para encontrar bancos de alimentos cercanos. ¡Pregúntame sobre bancos de alimentos en tu área!"
+          : "I've detected your location. I'll use this to find food banks nearest to you. Feel free to ask about food banks in your area!";
+        
+        setMessages(prev => [
+          ...prev, 
+          { role: "assistant", content: locationMessage }
+        ]);
+      },
+      (error) => {
+        console.error("Error getting location:", error);
+      }
+    );
+  };
+
+  const sendLocationToBackend = async (latitude: number, longitude: number) => {
+    try {
+      await fetch("http://localhost:5000/api/set-location", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ latitude, longitude }),
+      });
+    } catch (error) {
+      console.error("Error sending location to backend:", error);
+    }
+  };
+
+  const requestLocationPermission = () => {
+    if (navigator.geolocation) {
+      const requestingMessage = language === "spanish"
+        ? "Estoy solicitando acceso a tu ubicación para encontrar bancos de alimentos cercanos..."
+        : "I'm requesting access to your location to find food banks near you...";
+      
+      setMessages(prev => [
+        ...prev,
+        { role: "assistant", content: requestingMessage }
+      ]);
+      
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setUserLocation({ lat: latitude, lng: longitude });
+          sendLocationToBackend(latitude, longitude);
+          
+          const thankYouMessage = language === "spanish"
+            ? "¡Gracias! Ahora tengo tu ubicación y puedo proporcionarte recomendaciones más precisas de bancos de alimentos."
+            : "Thank you! I now have your location and can provide more accurate food bank recommendations.";
+          
+          setMessages(prev => [
+            ...prev,
+            { role: "assistant", content: thankYouMessage }
+          ]);
+        },
+        (error) => {
+          const errorMessage = language === "spanish"
+            ? "No pude acceder a tu ubicación. Aún puedes buscar bancos de alimentos mencionando tu área en tu mensaje."
+            : "I couldn't access your location. You can still search for food banks by mentioning your area in your message.";
+          
+          setMessages(prev => [
+            ...prev,
+            { role: "assistant", content: errorMessage }
+          ]);
+        }
+      );
+    }
+  };
+
+  const setUserLanguage = (selectedLanguage: string) => {
+    setLanguage(selectedLanguage);
+    setShowLanguageSelector(false);
+    
+    // Reset chat with appropriate welcome message
+    setChatHistory([]);
+    setMessages([
+      { 
+        role: "assistant", 
+        content: selectedLanguage === "spanish" ? welcomeMessages.spanish : welcomeMessages.english 
+      }
+    ]);
+  };
+
   const handleSendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (input.trim() === "") return;
@@ -33,6 +158,15 @@ export default function ChatbotPage() {
     setInput("");
     setIsLoading(true);
 
+    // Check for location-specific keywords to prompt for location
+    const locationKeywords = language === "english" 
+      ? ["near me", "nearby", "close", "closest", "nearest"]
+      : ["cerca", "cercano", "cercana", "próximo", "próxima"];
+    
+    if (locationKeywords.some(keyword => input.toLowerCase().includes(keyword)) && !userLocation && locationPermission !== "denied") {
+      requestLocationPermission();
+    }
+
     try {
       // Send message to backend API
       const response = await fetch("http://localhost:5000/api/chat", {
@@ -41,8 +175,11 @@ export default function ChatbotPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: input,
-          history: chatHistory
+          message: userLocation 
+            ? `${input} (User's coordinates: lat ${userLocation.lat}, lng ${userLocation.lng})`
+            : input,
+          history: chatHistory,
+          language: language
         }),
       });
 
@@ -59,13 +196,29 @@ export default function ChatbotPage() {
       setChatHistory(data.history);
     } catch (error) {
       console.error("Error:", error);
+      
+      const errorMessage = language === "spanish"
+        ? "Lo siento, encontré un error al conectarme a la base de datos de bancos de alimentos. Por favor, inténtalo de nuevo en un momento."
+        : "Sorry, I encountered an error connecting to the food bank database. Please try again in a moment.";
+      
       setMessages(prev => [...prev, { 
         role: "assistant", 
-        content: "Sorry, I encountered an error. Please try again." 
+        content: errorMessage
       }]);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  // Helper function to format message content with Markdown and emojis
+  const formatMessageContent = (content: string) => {
+    // Convert line breaks to <br> elements
+    return content.split('\n').map((line, index) => (
+      <React.Fragment key={index}>
+        {line}
+        <br />
+      </React.Fragment>
+    ));
   };
 
   return (
@@ -91,11 +244,90 @@ export default function ChatbotPage() {
         }}
       >
         <h1 style={{ fontSize: "36px", fontWeight: "bold", color: "#2c5f2d", textAlign: "center" }}>
-          Food Bank Finder
+          {language === "spanish" ? "Buscador de Bancos de Alimentos" : "Food Bank Finder"}
         </h1>
         <p style={{ fontSize: "18px", color: "#4b5563", textAlign: "center", marginBottom: "20px" }}>
-          Ask questions and get personalized food bank recommendations.
+          {language === "spanish" 
+            ? "Haz preguntas y obtén recomendaciones personalizadas de bancos de alimentos." 
+            : "Ask questions and get personalized food bank recommendations."}
         </p>
+        
+        {/* Language selector */}
+        {showLanguageSelector && (
+          <div 
+            style={{
+              backgroundColor: "#ffffff",
+              borderRadius: "12px",
+              padding: "15px",
+              marginBottom: "20px",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+              textAlign: "center"
+            }}
+          >
+            <p style={{ marginBottom: "10px", fontWeight: "bold" }}>
+              Choose your preferred language / Elige tu idioma preferido:
+            </p>
+            <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
+              <button
+                onClick={() => setUserLanguage("english")}
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor: "#2c5f2d",
+                  color: "white",
+                  borderRadius: "8px",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "16px",
+                  fontWeight: "bold"
+                }}
+              >
+                English 🇺🇸
+              </button>
+              <button
+                onClick={() => setUserLanguage("spanish")}
+                style={{
+                  padding: "10px 20px",
+                  backgroundColor: "#2c5f2d",
+                  color: "white",
+                  borderRadius: "8px",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "16px",
+                  fontWeight: "bold"
+                }}
+              >
+                Español 🇪🇸
+              </button>
+            </div>
+          </div>
+        )}
+        
+        {/* Location button */}
+        {!userLocation && locationPermission !== "denied" && !showLanguageSelector && (
+          <button
+            onClick={requestLocationPermission}
+            style={{
+              padding: "12px 20px",
+              backgroundColor: "#2c5f2d",
+              color: "white",
+              borderRadius: "8px",
+              border: "none",
+              cursor: "pointer",
+              fontSize: "16px",
+              fontWeight: "bold",
+              marginBottom: "20px",
+              alignSelf: "center",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px"
+            }}
+          >
+            <span role="img" aria-label="location">📍</span>
+            {language === "spanish" 
+              ? "Compartir mi ubicación para mejores resultados" 
+              : "Share My Location for Better Results"}
+          </button>
+        )}
         
         {/* Chat message container */}
         <div 
@@ -122,12 +354,13 @@ export default function ChatbotPage() {
                 color: "#4b5563",
                 borderRadius: "18px",
                 padding: "12px 16px",
-                maxWidth: "70%",
+                maxWidth: "75%",
                 marginBottom: "12px",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)"
+                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
+                whiteSpace: "pre-wrap"
               }}
             >
-              {message.content}
+              {formatMessageContent(message.content)}
             </div>
           ))}
           {isLoading && (
@@ -165,7 +398,7 @@ export default function ChatbotPage() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about food banks..."
+              placeholder="Ask about food banks near you..."
               style={{
                 flex: 1,
                 padding: "16px 20px",
