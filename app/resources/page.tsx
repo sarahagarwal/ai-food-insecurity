@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-export default function HomePage() {
+export default function ResourcesPage() {
   return (
     <div
       style={{
@@ -22,7 +22,10 @@ export default function HomePage() {
           flex: "1",
           width: "100%",
           padding: "40px",
-          textAlign: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "20px",
         }}
       >
         <h1
@@ -31,12 +34,19 @@ export default function HomePage() {
             fontWeight: "bold",
             color: "#2c5f2d",
             marginBottom: "20px",
+            fontFamily: "'Inter', sans-serif",
           }}
         >
-          Welcome to Food Bank Finder
+          Resources
         </h1>
-        <p style={{ fontSize: "20px", color: "#4b5563" }}>
-          Easily find food banks near you and access resources to fight food insecurity.
+        <p
+          style={{
+            fontSize: "20px",
+            color: "#4b5563",
+            fontFamily: "'Inter', sans-serif",
+          }}
+        >
+          Discover resources to help you and your community.
         </p>
       </main>
       <Footer />
