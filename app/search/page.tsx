@@ -15,16 +15,21 @@ export default function SearchPage() {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]);
 
-  // Update the translateFoodbank function
+  const translateOrOriginal = (key: string, fallback: string) => {
+    const translated = t(key);
+    return translated.startsWith(key.split('.')[0]) ? fallback : translated;
+  };
+  
   const translateFoodbank = (foodbank: any) => {
     return {
       ...foodbank,
-      name: t(`search.foodbanks.${foodbank.id}.name`) || foodbank.name,
-      description: t(`search.foodbanks.${foodbank.id}.description`) || "",
-      region: t(`search.regions.${foodbank.region}`) || foodbank.region,
-      frequency: t(`search.frequencies.${foodbank.frequency}`) || foodbank.frequency,
+      name: translateOrOriginal(`search.foodbanks.${foodbank.id}.name`, foodbank.name),
+      description: translateOrOriginal(`search.foodbanks.${foodbank.id}.description`, ""),
+      region: translateOrOriginal(`search.regions.${foodbank.region}`, foodbank.region),
+      frequency: translateOrOriginal(`search.frequencies.${foodbank.frequency}`, foodbank.frequency),
     };
   };
+  
 
   // Update search function to use translated terms
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,14 +48,19 @@ export default function SearchPage() {
     setFilteredResults(filtered);
   };
 
-  // Get unique values for filters with translations
   const getUniqueValues = (key: keyof typeof foodbanks[0]) => {
     const values = [...new Set(foodbanks.map(item => item[key]))];
-    return values.map(value => ({
-      original: value,
-      translated: t(`search.${key}s.${value}`) || value
-    }));
+  
+    return values.map((value) => {
+      const transKey = `search.${key}s.${value}`;
+      const translated = t(transKey);
+      return {
+        original: value,
+        translated: translated.startsWith('search.') ? value : translated
+      };
+    });
   };
+  
 
   return (
     <div
@@ -404,18 +414,19 @@ export default function SearchPage() {
                   >
                     {foodbank.name}
                   </h2>
-                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                    {foodbank.address}
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                    {foodbank.phone}
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                    {foodbank.region}
-                  </p>
-                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                    {foodbank.frequency}
-                  </p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", marginBottom: "4px" }}>
+                  <strong>📍 Address:</strong> {foodbank.address}
+                </p>
+                <p style={{ fontSize: "16px", color: "#4b5563", marginBottom: "4px" }}>
+                  <strong>📞 Phone:</strong> {foodbank.phone}
+                </p>
+                <p style={{ fontSize: "16px", color: "#4b5563", marginBottom: "4px" }}>
+                  <strong>🗺️ Region:</strong> {foodbank.region}
+                </p>
+                <p style={{ fontSize: "16px", color: "#4b5563" }}>
+                  <strong>🕒 Frequency:</strong> {foodbank.frequency}
+                </p>
+
                   <Link href={`/foodbank/${foodbank.id}`}>
                     <button
                       style={{
