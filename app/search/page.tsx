@@ -6,6 +6,40 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import foodbanks from "../../data/foodbanks_with_geocodes.json"; // Import the JSON data
 
+// Add these helper functions after your imports
+function getUniqueValues(data: any[], key: string): string[] {
+  const values = new Set<string>();
+  
+  data.forEach(item => {
+    if (Array.isArray(item[key])) {
+      item[key].forEach((value: string) => values.add(value));
+    } else if (item[key]) {
+      values.add(item[key]);
+    }
+  });
+
+  return Array.from(values).sort();
+}
+
+// Update the getFilterOptions function to use actual data
+function getFilterOptions(category: string): string[] {
+  switch (category) {
+    case "Region":
+      return getUniqueValues(foodbanks, "region");
+    case "Frequency":
+      return getUniqueValues(foodbanks, "frequency");
+    case "Services":
+      return getUniqueValues(foodbanks, "services");
+    default:
+      return [];
+  }
+}
+
+// First, update the filterCategories array to remove Services
+const filterCategories = ["Region", "Frequency"].filter(category => 
+  getFilterOptions(category).length > 0
+);
+
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredResults, setFilteredResults] = useState(foodbanks);
@@ -14,15 +48,12 @@ export default function SearchPage() {
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]);
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
-  const [selectedAccessibility, setSelectedAccessibility] = useState<string[]>(
-    []
-  );
 
   // Function to handle search input
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    applyFilters(term, selectedRegions, selectedFrequencies, selectedServices, selectedAccessibility);
+    applyFilters(term, selectedRegions, selectedFrequencies, selectedServices);
   };
 
   // Function to apply filters
@@ -30,8 +61,7 @@ export default function SearchPage() {
     term: string,
     regions: string[],
     frequencies: string[],
-    services: string[],
-    accessibility: string[]
+    services: string[]
   ) => {
     const filtered = foodbanks.filter((foodbank) => {
       const matchesSearchTerm =
@@ -54,20 +84,11 @@ export default function SearchPage() {
           foodbank.services.map((s: string) => s.toLowerCase()).includes(service.toLowerCase())
         );
 
-      const matchesAccessibility =
-        accessibility.length === 0 ||
-        accessibility.some((option) =>
-          foodbank.accessibilityOptions
-            ?.map((a: string) => a.toLowerCase())
-            .includes(option.toLowerCase())
-        );
-
       return (
         matchesSearchTerm &&
         matchesRegion &&
         matchesFrequency &&
-        matchesService &&
-        matchesAccessibility
+        matchesService
       );
     });
 
@@ -88,28 +109,23 @@ export default function SearchPage() {
           ? [...selectedRegions, value]
           : selectedRegions.filter((region) => region !== value);
         setSelectedRegions(updatedFilters);
+        applyFilters(searchTerm, updatedFilters, selectedFrequencies, selectedServices);
         break;
       case "frequency":
         updatedFilters = isChecked
           ? [...selectedFrequencies, value]
           : selectedFrequencies.filter((frequency) => frequency !== value);
         setSelectedFrequencies(updatedFilters);
+        applyFilters(searchTerm, selectedRegions, updatedFilters, selectedServices);
         break;
       case "service":
         updatedFilters = isChecked
           ? [...selectedServices, value]
           : selectedServices.filter((service) => service !== value);
         setSelectedServices(updatedFilters);
-        break;
-      case "accessibility":
-        updatedFilters = isChecked
-          ? [...selectedAccessibility, value]
-          : selectedAccessibility.filter((option) => option !== value);
-        setSelectedAccessibility(updatedFilters);
+        applyFilters(searchTerm, selectedRegions, selectedFrequencies, updatedFilters);
         break;
     }
-
-    applyFilters(searchTerm, updatedFilters, selectedFrequencies, selectedServices, selectedAccessibility);
   };
 
   return (
@@ -129,36 +145,196 @@ export default function SearchPage() {
         style={{
           flex: "1",
           width: "100%",
-          padding: "40px",
+          maxWidth: "1200px",
+          padding: "40px 20px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "20px",
+          gap: "30px",
         }}
       >
-        <h1
+        {/* Hero Section */}
+        <div
           style={{
-            fontSize: "48px", // Increased font size for the title
-            fontWeight: "bold",
-            color: "#2c5f2d",
-            marginBottom: "20px",
-          }}
-        >
-          Search Food Banks
-        </h1>
-        <p
-          style={{
-            fontSize: "24px", // Increased font size for the description
-            color: "#4b5563",
             textAlign: "center",
-            marginBottom: "20px",
+            marginBottom: "40px",
+            padding: "40px",
+            borderRadius: "20px",
+            backgroundColor: "rgba(255, 255, 255, 0.9)",
+            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+            border: "5px solid black",
+            width: "100%",
           }}
         >
-          Use the search bar or filters below to find food banks that meet your
-          needs.
-        </p>
+          <h1
+            style={{
+              fontSize: "56px",
+              fontWeight: "bold",
+              color: "#000000",
+              marginBottom: "20px",
+              lineHeight: "1.2",
+            }}
+          >
+            Search Food Banks
+          </h1>
+          <p
+            style={{
+              fontSize: "24px",
+              color: "#000000",
+              maxWidth: "800px",
+              margin: "0 auto",
+              lineHeight: "1.5",
+            }}
+          >
+            Use the search bar or filters below to find food banks that meet your needs.
+          </p>
+        </div>
 
-        {/* Search Input */}
+        {/* Filters Section - Moved up */}
+        <div
+          style={{
+            width: "100%",
+            maxWidth: "900px", // Match search bar width
+            padding: "10px",
+            border: "3px solid black",
+            borderRadius: "25px",
+            backgroundColor: "white",
+            boxShadow: "0 10px 12px rgba(0, 0, 0, 0.1)",
+            margin: "0 auto",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+            }}
+          >
+            {/* Region Filter */}
+            <div
+              style={{
+                width: "100%",
+                padding: "8px",
+                backgroundColor: "#f8f9fa",
+                borderRadius: "10px",
+                border: "2px solid black",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  color: "#000000",
+                  marginBottom: "6px",
+                  textAlign: "center",
+                }}
+              >
+                Region
+              </h3>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  gap: "8px",
+                  padding: "0 10px",
+                }}
+              >
+                {getFilterOptions("Region").map((option) => (
+                  <label
+                    key={option}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "13px",
+                      color: "#000000",
+                      padding: "2px 8px",
+                      cursor: "pointer",
+                      whiteSpace: "nowrap",
+                      minWidth: "120px", // Ensure consistent width
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        handleCheckboxChange("region", option, e.target.checked)
+                      }
+                      style={{ 
+                        marginRight: "4px",
+                        width: "12px",
+                        height: "12px",
+                      }}
+                    />
+                    {option}
+                  </label>
+                ))}
+              </div>
+            </div>
+
+            {/* Frequency Filter */}
+            <div
+              style={{
+                width: "100%",
+                padding: "8px",
+                backgroundColor: "#f8f9fa",
+                borderRadius: "10px",
+                border: "2px solid black",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                  color: "#000000",
+                  marginBottom: "6px",
+                  textAlign: "center",
+                }}
+              >
+                Frequency
+              </h3>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                  gap: "8px",
+                  padding: "0 10px",
+                }}
+              >
+                {getFilterOptions("Frequency").map((option) => (
+                  <label
+                    key={option}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      fontSize: "13px",
+                      color: "#000000",
+                      padding: "2px 8px",
+                      cursor: "pointer",
+                      whiteSpace: "nowrap",
+                      minWidth: "120px", // Ensure consistent width
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      onChange={(e) =>
+                        handleCheckboxChange("frequency", option, e.target.checked)
+                      }
+                      style={{ 
+                        marginRight: "4px",
+                        width: "12px",
+                        height: "12px",
+                      }}
+                    />
+                    {option}
+                  </label>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Search Input - Moved down */}
         <input
           type="text"
           placeholder="Search by name, region, frequency, or services..."
@@ -166,177 +342,26 @@ export default function SearchPage() {
           onChange={handleSearch}
           style={{
             width: "100%",
-            maxWidth: "800px",
-            padding: "15px 20px",
-            fontSize: "18px",
-            border: "5px solid black", // 3xl black outline
-            borderRadius: "25px",
+            maxWidth: "900px",
+            padding: "20px 30px",
+            fontSize: "20px",
+            border: "5px solid black",
+            borderRadius: "30px",
             background: "white",
             boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
             color: "black",
             outline: "none",
-            transition: "box-shadow 0.3s, transform 0.3s",
+            transition: "all 0.3s ease",
           }}
           onFocus={(e) => {
-            e.target.style.boxShadow = "0 12px 30px rgba(0, 0, 0, 0.2)";
             e.target.style.transform = "scale(1.02)";
+            e.target.style.boxShadow = "0 12px 30px rgba(0, 0, 0, 0.15)";
           }}
           onBlur={(e) => {
-            e.target.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.1)";
             e.target.style.transform = "scale(1)";
+            e.target.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.1)";
           }}
         />
-
-        {/* Filters Section */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "30px",
-            justifyContent: "center",
-            marginTop: "20px",
-            padding: "20px",
-            border: "5px solid black", // 3xl black outline for filters section
-            borderRadius: "12px",
-            backgroundColor: "#ffffff",
-          }}
-        >
-          {/* Region Filters */}
-          <div style={{ padding: "10px" }}>
-            <h3
-              style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "#000000",
-                marginBottom: "10px",
-              }}
-            >
-              Region
-            </h3>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px", color: "black" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("region", "DC Ward 8", e.target.checked)
-                }
-              />
-              DC Ward 8
-            </label>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px", color: "black" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("region", "DC Ward 7", e.target.checked)
-                }
-              />
-              DC Ward 7
-            </label>
-          </div>
-
-          {/* Frequency Filters */}
-          <div style={{ padding: "10px", color: "black"}}>
-            <h3
-              style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "#000000",
-                marginBottom: "10px",
-              }}
-            >
-              Frequency
-            </h3>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("frequency", "Weekly", e.target.checked)
-                }
-              />
-              Weekly
-            </label>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("frequency", "Monthly", e.target.checked)
-                }
-              />
-              Monthly
-            </label>
-          </div>
-
-          {/* Service Filters */}
-          <div style={{ padding: "10px" }}>
-            <h3
-              style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "#000000",
-                marginBottom: "10px",
-              }}
-            >
-              Services
-            </h3>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("service", "Walk-up", e.target.checked)
-                }
-              />
-              Walk-up
-            </label>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange("service", "Drive-thru", e.target.checked)
-                }
-              />
-              Drive-thru
-            </label>
-          </div>
-
-          {/* Accessibility Filters */}
-          <div style={{ padding: "10px" }}>
-            <h3
-              style={{
-                fontSize: "20px",
-                fontWeight: "bold",
-                color: "#000000",
-                marginBottom: "10px",
-              }}
-            >
-              Accessibility
-            </h3>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "accessibility",
-                    "Wheelchair Accessible",
-                    e.target.checked
-                  )
-                }
-              />
-              Wheelchair Accessible
-            </label>
-            <label style={{ display: "block", marginBottom: "10px", fontSize: "18px" }}>
-              <input
-                type="checkbox"
-                onChange={(e) =>
-                  handleCheckboxChange(
-                    "accessibility",
-                    "Public Transport Nearby",
-                    e.target.checked
-                  )
-                }
-              />
-              Public Transport Nearby
-            </label>
-          </div>
-        </div>
 
         {/* Results Section */}
         <div
@@ -357,7 +382,7 @@ export default function SearchPage() {
                 backgroundColor: "#ffffff",
                 borderRadius: "16px",
                 boxShadow: "0 6px 15px rgba(0, 0, 0, 0.1)",
-                border: "5px solid black", // 3xl black outline for food bank cards
+                border: "5px solid black",
                 textAlign: "left",
               }}
             >
