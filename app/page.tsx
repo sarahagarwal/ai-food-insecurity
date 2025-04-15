@@ -202,9 +202,11 @@ export default function HomePage() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(3, 1fr)", // Changed from auto-fit to fixed 3 columns
               gap: "2rem",
               width: "100%",
+              overflowX: "auto", // Allow horizontal scrolling on small screens
+              minWidth: "900px", // Ensure minimum width to fit all components
             }}
           >
             {features.map((feature, index) => (
@@ -221,6 +223,7 @@ export default function HomePage() {
                   flexDirection: "column",
                   alignItems: "center",
                   textAlign: "center",
+                  minWidth: "280px", // Ensure minimum width for each component
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-8px)";
