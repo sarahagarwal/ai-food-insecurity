@@ -24,6 +24,12 @@ function formatTime(t) {
   return "";
 }
 
+function cleanName(name) {
+    if (!name.includes(" : ")) return name;
+    const [left, right] = name.split(" : ").map(part => part.trim());
+    return left === right ? left : name;
+  }
+  
 // Load datasets
 const datasets = {
   partnersHOO: loadSheet("CAFB_Shopping_Partners_HOO.xlsx"),
@@ -38,6 +44,7 @@ const foodbanks = {};
 
 // Initialize record if not present
 function ensureFoodbank(key, name = "") {
+    name = cleanName(name);
   if (!foodbanks[key]) {
     foodbanks[key] = {
       id: key,
@@ -69,7 +76,7 @@ datasets.partnersHOO.forEach(entry => {
   ensureFoodbank(key, entry["Name"]);
   const fb = foodbanks[key];
 
-  fb.name = entry["Name"] || fb.name;
+  fb.name = cleanName(entry["Name"] || fb.name);
   fb.address = entry["Shipping Address"] || fb.address;
   fb.phone = entry["Phone"] || fb.phone;
   fb.region = entry["County/Ward"] || fb.region;
@@ -99,7 +106,7 @@ datasets.marketsHOO.forEach(entry => {
   ensureFoodbank(key, entry["Agency Name"]);
   const fb = foodbanks[key];
 
-  fb.name = fb.name || entry["Agency Name"];
+  fb.name = cleanName(fb.name || entry["Agency Name"]);
   fb.address = fb.address || entry["Shipping Address"];
   fb.frequency = entry["Frequency"] || fb.frequency;
 

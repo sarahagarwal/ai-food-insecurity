@@ -9,6 +9,13 @@ const outputPath = path.join(__dirname, "../data/foodbanks_with_geocodes.json");
 
 const data = JSON.parse(fs.readFileSync(inputPath, "utf-8"));
 
+// === Clean name if duplicate ===
+function cleanName(name) {
+  if (!name.includes(" : ")) return name;
+  const [left, right] = name.split(" : ").map(s => s.trim());
+  return left === right ? left : name;
+}
+
 // Geocode address using Google Maps API
 async function geocode(address) {
   const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${API_KEY}`;
@@ -27,6 +34,9 @@ async function geocode(address) {
 // Main loop
 (async () => {
   for (const entry of data) {
+    // Clean up duplicate names like "X : X"
+    entry.name = cleanName(entry.name || "");
+
     // Only geocode if lat/lng missing
     if (!entry.lat || !entry.lng) {
       const rawAddress = entry.address || "";
