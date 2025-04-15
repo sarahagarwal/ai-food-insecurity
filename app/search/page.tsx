@@ -21,56 +21,47 @@ function getUniqueValues(data: any[], key: string): string[] {
   return Array.from(values).sort();
 }
 
-// Update the getFilterOptions function to use actual data
+// First, update the getFilterOptions function
 function getFilterOptions(category: string): string[] {
   switch (category) {
     case "Region":
       return getUniqueValues(foodbanks, "region");
     case "Frequency":
       return getUniqueValues(foodbanks, "frequency");
-    case "Services":
-      return getUniqueValues(foodbanks, "services");
     default:
       return [];
   }
 }
 
-// First, update the filterCategories array to remove Services
-const filterCategories = ["Region", "Frequency"].filter(category => 
-  getFilterOptions(category).length > 0
-);
+
+
 
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredResults, setFilteredResults] = useState(foodbanks);
+  const [selectedRegions, setSelectedRegions] = useState<string[]>([]); // Add this
+  const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]); // Add this
 
-  // Filters state
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
-  const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]);
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  
 
-  // Function to handle search input
+  // Update handleSearch function
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    applyFilters(term, selectedRegions, selectedFrequencies, selectedServices);
+    applyFilters(term, selectedRegions, selectedFrequencies);
   };
 
-  // Function to apply filters
+  // Update applyFilters function
   const applyFilters = (
     term: string,
     regions: string[],
     frequencies: string[],
-    services: string[]
   ) => {
     const filtered = foodbanks.filter((foodbank) => {
       const matchesSearchTerm =
-        foodbank.name.toLowerCase().includes(term) ||
+        foodbank.name.toLowerCase().split(":").pop()?.includes(term) ||
         foodbank.region.toLowerCase().includes(term) ||
-        foodbank.frequency.toLowerCase().includes(term) ||
-        foodbank.services.some((service: string) =>
-          service.toLowerCase().includes(term)
-        );
+        foodbank.frequency.toLowerCase().includes(term);
 
       const matchesRegion =
         regions.length === 0 || regions.includes(foodbank.region);
@@ -78,24 +69,13 @@ export default function SearchPage() {
       const matchesFrequency =
         frequencies.length === 0 || frequencies.includes(foodbank.frequency);
 
-      const matchesService =
-        services.length === 0 ||
-        services.some((service) =>
-          foodbank.services.map((s: string) => s.toLowerCase()).includes(service.toLowerCase())
-        );
-
-      return (
-        matchesSearchTerm &&
-        matchesRegion &&
-        matchesFrequency &&
-        matchesService
-      );
+      return matchesSearchTerm && matchesRegion && matchesFrequency;
     });
 
     setFilteredResults(filtered);
   };
 
-  // Function to handle checkbox changes
+  // Update handleCheckboxChange function
   const handleCheckboxChange = (
     filterType: string,
     value: string,
@@ -109,21 +89,14 @@ export default function SearchPage() {
           ? [...selectedRegions, value]
           : selectedRegions.filter((region) => region !== value);
         setSelectedRegions(updatedFilters);
-        applyFilters(searchTerm, updatedFilters, selectedFrequencies, selectedServices);
+        applyFilters(searchTerm, updatedFilters, selectedFrequencies);
         break;
       case "frequency":
         updatedFilters = isChecked
           ? [...selectedFrequencies, value]
           : selectedFrequencies.filter((frequency) => frequency !== value);
         setSelectedFrequencies(updatedFilters);
-        applyFilters(searchTerm, selectedRegions, updatedFilters, selectedServices);
-        break;
-      case "service":
-        updatedFilters = isChecked
-          ? [...selectedServices, value]
-          : selectedServices.filter((service) => service !== value);
-        setSelectedServices(updatedFilters);
-        applyFilters(searchTerm, selectedRegions, selectedFrequencies, updatedFilters);
+        applyFilters(searchTerm, selectedRegions, updatedFilters);
         break;
     }
   };
@@ -160,12 +133,36 @@ export default function SearchPage() {
             marginBottom: "40px",
             padding: "40px",
             borderRadius: "20px",
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-            border: "5px solid black",
+            background: "rgba(255, 255, 255, 0.95)",
+            boxShadow: "0 4px 20px rgba(44, 95, 45, 0.1)",
+            border: "4px solid #2c5f2d",
             width: "100%",
+            transition: "all 0.3s ease",
+            position: "relative",
+            overflow: "hidden",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-5px)";
+            e.currentTarget.style.boxShadow = "0 20px 40px rgba(44, 95, 45, 0.2)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "translateY(0)";
+            e.currentTarget.style.boxShadow = "0 4px 20px rgba(44, 95, 45, 0.1)";
           }}
         >
+          {/* Add shimmer effect */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              right: 0,
+              height: "4px",
+              background: "linear-gradient(90deg, #2c5f2d, #3a7c3b, #2c5f2d)",
+              backgroundSize: "200% 100%",
+              animation: "shimmer 2s infinite linear",
+            }}
+          />
           <h1
             style={{
               fontSize: "56px",
@@ -217,7 +214,19 @@ export default function SearchPage() {
                 padding: "8px",
                 backgroundColor: "#f8f9fa",
                 borderRadius: "10px",
-                border: "2px solid black",
+                border: "2px solid #2c5f2d",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-5px)";
+                e.currentTarget.style.boxShadow = "0 10px 20px rgba(44, 95, 45, 0.15)";
+                e.currentTarget.style.backgroundColor = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.backgroundColor = "#f8f9fa";
               }}
             >
               <h3
@@ -278,7 +287,19 @@ export default function SearchPage() {
                 padding: "8px",
                 backgroundColor: "#f8f9fa",
                 borderRadius: "10px",
-                border: "2px solid black",
+                border: "2px solid #2c5f2d",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-5px)";
+                e.currentTarget.style.boxShadow = "0 10px 20px rgba(44, 95, 45, 0.15)";
+                e.currentTarget.style.backgroundColor = "white";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "none";
+                e.currentTarget.style.backgroundColor = "#f8f9fa";
               }}
             >
               <h3
@@ -337,7 +358,7 @@ export default function SearchPage() {
         {/* Search Input - Moved down */}
         <input
           type="text"
-          placeholder="Search by name, region, frequency, or services..."
+          placeholder="Search by name, region, or frequency..."  // Updated placeholder
           value={searchTerm}
           onChange={handleSearch}
           style={{
@@ -345,21 +366,21 @@ export default function SearchPage() {
             maxWidth: "900px",
             padding: "20px 30px",
             fontSize: "20px",
-            border: "5px solid black",
-            borderRadius: "30px",
+            border: "4px solid #2c5f2d",
+            borderRadius: "100px",
             background: "white",
-            boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
-            color: "black",
+            boxShadow: "0 8px 20px rgba(44, 95, 45, 0.1)",
+            color: "#333",
             outline: "none",
             transition: "all 0.3s ease",
           }}
           onFocus={(e) => {
             e.target.style.transform = "scale(1.02)";
-            e.target.style.boxShadow = "0 12px 30px rgba(0, 0, 0, 0.15)";
+            e.target.style.boxShadow = "0 15px 30px rgba(44, 95, 45, 0.2)";
           }}
           onBlur={(e) => {
             e.target.style.transform = "scale(1)";
-            e.target.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.1)";
+            e.target.style.boxShadow = "0 8px 20px rgba(44, 95, 45, 0.1)";
           }}
         />
 
@@ -381,11 +402,36 @@ export default function SearchPage() {
                 padding: "20px",
                 backgroundColor: "#ffffff",
                 borderRadius: "16px",
-                boxShadow: "0 6px 15px rgba(0, 0, 0, 0.1)",
-                border: "5px solid black",
+                boxShadow: "0 6px 15px rgba(44, 95, 45, 0.1)",
+                border: "3px solid #2c5f2d",
                 textAlign: "left",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+                position: "relative",
+                overflow: "hidden",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
+                e.currentTarget.style.boxShadow = "0 20px 30px rgba(44, 95, 45, 0.2)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "0 6px 15px rgba(44, 95, 45, 0.1)";
               }}
             >
+              {/* Add hover gradient */}
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: "4px",
+                  background: "linear-gradient(90deg, #2c5f2d, #3a7c3b, #2c5f2d)",
+                  opacity: 0,
+                  transition: "opacity 0.3s ease",
+                }}
+              />
               <h2
                 style={{
                   fontSize: "20px",
@@ -397,52 +443,42 @@ export default function SearchPage() {
                 {foodbank.name}
               </h2>
               <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Address:</strong> {foodbank.address}
+                {foodbank.address}
               </p>
               <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Phone:</strong> {foodbank.phone}
+                {foodbank.phone}
               </p>
               <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Region:</strong> {foodbank.region}
+                {foodbank.region}
               </p>
               <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Frequency:</strong> {foodbank.frequency}
+                {foodbank.frequency}
               </p>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Services:</strong>{" "}
-                {foodbank.services.length > 0
-                  ? foodbank.services.join(", ")
-                  : "N/A"}
-              </p>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                <strong>Accessibility:</strong>{" "}
-                {foodbank.accessibilityOptions?.length > 0
-                  ? foodbank.accessibilityOptions.join(", ")
-                  : "N/A"}
-              </p>
-              {/* More Info Button */}
               <Link href={`/foodbank/${foodbank.id}`}>
                 <button
                   style={{
-                    marginTop: "10px",
-                    padding: "10px 20px",
-                    backgroundColor: "#2c5f2d",
+                    marginTop: "15px",
+                    padding: "12px 24px",
+                    background: "linear-gradient(45deg, #2c5f2d, #3a7c3b)",
                     color: "#ffffff",
                     border: "none",
-                    borderRadius: "8px",
+                    borderRadius: "50px",
                     fontSize: "16px",
                     fontWeight: "bold",
                     cursor: "pointer",
-                    transition: "background-color 0.3s",
+                    transition: "all 0.3s ease",
+                    boxShadow: "0 4px 15px rgba(44, 95, 45, 0.2)",
                   }}
-                  onMouseOver={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#1e4620")
-                  }
-                  onMouseOut={(e) =>
-                    (e.currentTarget.style.backgroundColor = "#2c5f2d")
-                  }
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 8px 20px rgba(44, 95, 45, 0.3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(44, 95, 45, 0.2)";
+                  }}
                 >
-                  More Info
+                  More Info →
                 </button>
               </Link>
             </div>
