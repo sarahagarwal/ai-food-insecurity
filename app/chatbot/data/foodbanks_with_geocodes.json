@@ -11303,7 +11303,7 @@
       "Walk up"
     ],
     "food_format": [
-      "Loose groceries,Pre-bagged or boxed groceries"
+      "Loose groceries","Pre-bagged", "boxed groceries"
     ],
     "choice_options": [],
     "frequency": "Every Other Week",
