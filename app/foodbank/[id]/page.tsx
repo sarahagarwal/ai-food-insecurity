@@ -5,8 +5,11 @@ import { useParams } from "next/navigation";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import foodbanks from "../../../data/foodbanks_with_geocodes.json"; // Import the JSON data
+import { useLanguage } from "../../../context/LanguageContext";
+import { translations } from "../../../translations/translations";
 
 export default function FoodBankDetailsPage() {
+  const { t } = useLanguage();
   const { id } = useParams(); // Get the dynamic ID from the URL
   const foodbank = foodbanks.find((fb) => fb.id.toString() === id); // Match the ID as a string
 
@@ -33,7 +36,7 @@ export default function FoodBankDetailsPage() {
           }}
         >
           <h1 style={{ fontSize: "24px", color: "#ff0000" }}>
-            Food Bank Not Found
+            {t("foodbank.notFound")}
           </h1>
         </main>
         <Footer />
@@ -108,7 +111,7 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Address
+            {t("foodbank.address")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>{foodbank.address}</p>
         </section>
@@ -127,10 +130,10 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Contact Information
+            {t("foodbank.contactInformation")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>Phone:</strong> {foodbank.phone}
+            <strong>{t("foodbank.phone")}:</strong> {foodbank.phone}
           </p>
         </section>
 
@@ -148,13 +151,13 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            General Information
+            {t("foodbank.generalInformation")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>Region:</strong> {foodbank.region}
+            <strong>{t("foodbank.region")}:</strong> {foodbank.region}
           </p>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            <strong>Frequency:</strong> {foodbank.frequency}
+            <strong>{t("foodbank.frequency")}:</strong> {foodbank.frequency}
           </p>
         </section>
 
@@ -172,12 +175,12 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Services Offered
+            {t("foodbank.servicesOffered")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.services.length > 0
               ? foodbank.services.join(", ")
-              : "No services listed."}
+              : t("foodbank.noServicesListed")}
           </p>
         </section>
 
@@ -195,12 +198,12 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Accessibility Options
+            {t("foodbank.accessibilityOptions")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.accessibilityOptions?.length > 0
               ? foodbank.accessibilityOptions.join(", ")
-              : "No accessibility options listed."}
+              : t("foodbank.noAccessibilityOptionsListed")}
           </p>
         </section>
 
@@ -218,10 +221,10 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Description
+            {t("foodbank.description")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
-            {foodbank.description || "No description available."}
+            {foodbank.description || t("foodbank.noDescriptionAvailable")}
           </p>
         </section>
 
@@ -239,12 +242,12 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Operating Hours
+            {t("foodbank.operatingHours")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             {foodbank.hours?.length > 0
               ? foodbank.hours.join(", ")
-              : "No operating hours listed."}
+              : t("foodbank.noOperatingHoursListed")}
           </p>
         </section>
 
@@ -262,7 +265,7 @@ export default function FoodBankDetailsPage() {
               marginBottom: "10px",
             }}
           >
-            Location
+            {t("foodbank.location")}
           </h2>
           <p style={{ fontSize: "18px", margin: "0" }}>
             <a
@@ -274,7 +277,7 @@ export default function FoodBankDetailsPage() {
                 textDecoration: "underline",
               }}
             >
-              View on Google Maps
+              {t("foodbank.viewOnGoogleMaps")}
             </a>
           </p>
         </section>

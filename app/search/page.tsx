@@ -1,104 +1,55 @@
 "use client";
 
-import React, { useState } from "react";
-import Link from "next/link"; // Import Link for navigation
+import React, { useState, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Link from "next/link";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../translations/translations";
 import foodbanks from "../../data/foodbanks_with_geocodes.json"; // Import the JSON data
 
-// Add these helper functions after your imports
-function getUniqueValues(data: any[], key: string): string[] {
-  const values = new Set<string>();
-  
-  data.forEach(item => {
-    if (Array.isArray(item[key])) {
-      item[key].forEach((value: string) => values.add(value));
-    } else if (item[key]) {
-      values.add(item[key]);
-    }
-  });
-
-  return Array.from(values).sort();
-}
-
-// First, update the getFilterOptions function
-function getFilterOptions(category: string): string[] {
-  switch (category) {
-    case "Region":
-      return getUniqueValues(foodbanks, "region");
-    case "Frequency":
-      return getUniqueValues(foodbanks, "frequency");
-    default:
-      return [];
-  }
-}
-
-
-
-
 export default function SearchPage() {
+  const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredResults, setFilteredResults] = useState(foodbanks);
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([]); // Add this
-  const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]); // Add this
+  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
+  const [selectedFrequencies, setSelectedFrequencies] = useState<string[]>([]);
 
-  
+  // Update the translateFoodbank function
+  const translateFoodbank = (foodbank: any) => {
+    return {
+      ...foodbank,
+      name: t(`search.foodbanks.${foodbank.id}.name`) || foodbank.name,
+      description: t(`search.foodbanks.${foodbank.id}.description`) || "",
+      region: t(`search.regions.${foodbank.region}`) || foodbank.region,
+      frequency: t(`search.frequencies.${foodbank.frequency}`) || foodbank.frequency,
+    };
+  };
 
-  // Update handleSearch function
+  // Update search function to use translated terms
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const term = e.target.value.toLowerCase();
     setSearchTerm(term);
-    applyFilters(term, selectedRegions, selectedFrequencies);
-  };
-
-  // Update applyFilters function
-  const applyFilters = (
-    term: string,
-    regions: string[],
-    frequencies: string[],
-  ) => {
+    
     const filtered = foodbanks.filter((foodbank) => {
-      const matchesSearchTerm =
-        foodbank.name.toLowerCase().split(":").pop()?.includes(term) ||
-        foodbank.region.toLowerCase().includes(term) ||
-        foodbank.frequency.toLowerCase().includes(term);
-
-      const matchesRegion =
-        regions.length === 0 || regions.includes(foodbank.region);
-
-      const matchesFrequency =
-        frequencies.length === 0 || frequencies.includes(foodbank.frequency);
-
-      return matchesSearchTerm && matchesRegion && matchesFrequency;
+      const translatedFoodbank = translateFoodbank(foodbank);
+      return (
+        translatedFoodbank.name.toLowerCase().includes(term) ||
+        translatedFoodbank.region.toLowerCase().includes(term) ||
+        translatedFoodbank.frequency.toLowerCase().includes(term)
+      );
     });
-
+    
     setFilteredResults(filtered);
   };
 
-  // Update handleCheckboxChange function
-  const handleCheckboxChange = (
-    filterType: string,
-    value: string,
-    isChecked: boolean
-  ) => {
-    let updatedFilters: string[] = [];
-
-    switch (filterType) {
-      case "region":
-        updatedFilters = isChecked
-          ? [...selectedRegions, value]
-          : selectedRegions.filter((region) => region !== value);
-        setSelectedRegions(updatedFilters);
-        applyFilters(searchTerm, updatedFilters, selectedFrequencies);
-        break;
-      case "frequency":
-        updatedFilters = isChecked
-          ? [...selectedFrequencies, value]
-          : selectedFrequencies.filter((frequency) => frequency !== value);
-        setSelectedFrequencies(updatedFilters);
-        applyFilters(searchTerm, selectedRegions, updatedFilters);
-        break;
-    }
+  // Get unique values for filters with translations
+  const getUniqueValues = (key: keyof typeof foodbanks[0]) => {
+    const values = [...new Set(foodbanks.map(item => item[key]))];
+    return values.map(value => ({
+      original: value,
+      translated: t(`search.${key}s.${value}`) || value
+    }));
   };
 
   return (
@@ -172,7 +123,7 @@ export default function SearchPage() {
               lineHeight: "1.2",
             }}
           >
-            Search Food Banks
+            {t("search.title")}
           </h1>
           <p
             style={{
@@ -238,7 +189,7 @@ export default function SearchPage() {
                   textAlign: "center",
                 }}
               >
-                Region
+                {t("search.filters.region")}
               </h3>
               <div
                 style={{
@@ -249,9 +200,9 @@ export default function SearchPage() {
                   padding: "0 10px",
                 }}
               >
-                {getFilterOptions("Region").map((option) => (
+                {getUniqueValues("region").map(({ original, translated }) => (
                   <label
-                    key={option}
+                    key={original}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -265,16 +216,20 @@ export default function SearchPage() {
                   >
                     <input
                       type="checkbox"
-                      onChange={(e) =>
-                        handleCheckboxChange("region", option, e.target.checked)
-                      }
+                      checked={selectedRegions.includes(original)}
+                      onChange={(e) => {
+                        const newRegions = e.target.checked
+                          ? [...selectedRegions, original]
+                          : selectedRegions.filter(r => r !== original);
+                        setSelectedRegions(newRegions);
+                      }}
                       style={{ 
                         marginRight: "4px",
                         width: "12px",
                         height: "12px",
                       }}
                     />
-                    {option}
+                    {translated}
                   </label>
                 ))}
               </div>
@@ -311,7 +266,7 @@ export default function SearchPage() {
                   textAlign: "center",
                 }}
               >
-                Frequency
+                {t("search.filters.frequency")}
               </h3>
               <div
                 style={{
@@ -322,9 +277,9 @@ export default function SearchPage() {
                   padding: "0 10px",
                 }}
               >
-                {getFilterOptions("Frequency").map((option) => (
+                {getUniqueValues("frequency").map(({ original, translated }) => (
                   <label
-                    key={option}
+                    key={original}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -338,16 +293,20 @@ export default function SearchPage() {
                   >
                     <input
                       type="checkbox"
-                      onChange={(e) =>
-                        handleCheckboxChange("frequency", option, e.target.checked)
-                      }
+                      checked={selectedFrequencies.includes(original)}
+                      onChange={(e) => {
+                        const newFrequencies = e.target.checked
+                          ? [...selectedFrequencies, original]
+                          : selectedFrequencies.filter(f => f !== original);
+                        setSelectedFrequencies(newFrequencies);
+                      }}
                       style={{ 
                         marginRight: "4px",
                         width: "12px",
                         height: "12px",
                       }}
                     />
-                    {option}
+                    {translated}
                   </label>
                 ))}
               </div>
@@ -358,7 +317,7 @@ export default function SearchPage() {
         {/* Search Input - Moved down */}
         <input
           type="text"
-          placeholder="Search by name, region, or frequency..."  // Updated placeholder
+          placeholder={t("search.searchPlaceholder")}  // Updated placeholder
           value={searchTerm}
           onChange={handleSearch}
           style={{
@@ -395,94 +354,99 @@ export default function SearchPage() {
             marginTop: "20px",
           }}
         >
-          {filteredResults.map((foodbank) => (
-            <div
-              key={foodbank.id}
-              style={{
-                padding: "20px",
-                backgroundColor: "#ffffff",
-                borderRadius: "16px",
-                boxShadow: "0 6px 15px rgba(44, 95, 45, 0.1)",
-                border: "3px solid #2c5f2d",
-                textAlign: "left",
-                transition: "all 0.3s ease",
-                cursor: "pointer",
-                position: "relative",
-                overflow: "hidden",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
-                e.currentTarget.style.boxShadow = "0 20px 30px rgba(44, 95, 45, 0.2)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.boxShadow = "0 6px 15px rgba(44, 95, 45, 0.1)";
-              }}
-            >
-              {/* Add hover gradient */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "4px",
-                  background: "linear-gradient(90deg, #2c5f2d, #3a7c3b, #2c5f2d)",
-                  opacity: 0,
-                  transition: "opacity 0.3s ease",
-                }}
-              />
-              <h2
-                style={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
-                  color: "#2c5f2d",
-                  marginBottom: "10px",
-                }}
-              >
-                {foodbank.name}
-              </h2>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                {foodbank.address}
-              </p>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                {foodbank.phone}
-              </p>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                {foodbank.region}
-              </p>
-              <p style={{ fontSize: "16px", color: "#4b5563" }}>
-                {foodbank.frequency}
-              </p>
-              <Link href={`/foodbank/${foodbank.id}`}>
-                <button
+          {filteredResults.length === 0 ? (
+            <p>{t("search.results.noResults")}</p>
+          ) : (
+            filteredResults.map((foodbank) => {
+              return (
+                <div
+                  key={foodbank.id}
                   style={{
-                    marginTop: "15px",
-                    padding: "12px 24px",
-                    background: "linear-gradient(45deg, #2c5f2d, #3a7c3b)",
-                    color: "#ffffff",
-                    border: "none",
-                    borderRadius: "50px",
-                    fontSize: "16px",
-                    fontWeight: "bold",
-                    cursor: "pointer",
+                    padding: "20px",
+                    backgroundColor: "#ffffff",
+                    borderRadius: "16px",
+                    boxShadow: "0 6px 15px rgba(44, 95, 45, 0.1)",
+                    border: "3px solid #2c5f2d",
+                    textAlign: "left",
                     transition: "all 0.3s ease",
-                    boxShadow: "0 4px 15px rgba(44, 95, 45, 0.2)",
+                    cursor: "pointer",
+                    position: "relative",
+                    overflow: "hidden",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 8px 20px rgba(44, 95, 45, 0.3)";
+                    e.currentTarget.style.transform = "translateY(-10px) scale(1.02)";
+                    e.currentTarget.style.boxShadow = "0 20px 30px rgba(44, 95, 45, 0.2)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(44, 95, 45, 0.2)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.boxShadow = "0 6px 15px rgba(44, 95, 45, 0.1)";
                   }}
                 >
-                  More Info →
-                </button>
-              </Link>
-            </div>
-          ))}
+                  <div
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      right: 0,
+                      height: "4px",
+                      background: "linear-gradient(90deg, #2c5f2d, #3a7c3b, #2c5f2d)",
+                      opacity: 0,
+                      transition: "opacity 0.3s ease",
+                    }}
+                  />
+                  <h2
+                    style={{
+                      fontSize: "20px",
+                      fontWeight: "bold",
+                      color: "#2c5f2d",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    {foodbank.name}
+                  </h2>
+                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
+                    {foodbank.address}
+                  </p>
+                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
+                    {foodbank.phone}
+                  </p>
+                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
+                    {foodbank.region}
+                  </p>
+                  <p style={{ fontSize: "16px", color: "#4b5563" }}>
+                    {foodbank.frequency}
+                  </p>
+                  <Link href={`/foodbank/${foodbank.id}`}>
+                    <button
+                      style={{
+                        marginTop: "15px",
+                        padding: "12px 24px",
+                        background: "linear-gradient(45deg, #2c5f2d, #3a7c3b)",
+                        color: "#ffffff",
+                        border: "none",
+                        borderRadius: "50px",
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                        transition: "all 0.3s ease",
+                        boxShadow: "0 4px 15px rgba(44, 95, 45, 0.2)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-2px)";
+                        e.currentTarget.style.boxShadow = "0 8px 20px rgba(44, 95, 45, 0.3)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow = "0 4px 15px rgba(44, 95, 45, 0.2)";
+                      }}
+                    >
+                      {t("search.results.moreInfo")}
+                    </button>
+                  </Link>
+                </div>
+              );
+            })
+          )}
         </div>
       </main>
       <Footer />
