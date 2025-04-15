@@ -1,171 +1,35 @@
 "use client";
-
-import React, { useState, useRef, useEffect, FormEvent } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
+interface Message {
+  role: "user" | "assistant";
+  content: string;
+}
+
 export default function ChatbotPage() {
-  // Language state
-  const [language, setLanguage] = useState<string>("english");
-  
-  // Initial welcome messages based on language
-  const welcomeMessages = {
-    english: "Hello! I can help you find food banks in your area. To provide the best recommendations, could you share your location or the area you're looking in?",
-    spanish: "¡Hola! Puedo ayudarte a encontrar bancos de alimentos en tu área. Para darte las mejores recomendaciones, ¿podrías compartir tu ubicación o el área donde estás buscando?"
-  };
-
-  const [messages, setMessages] = useState<{ role: string; content: string }[]>([
-    { role: "assistant", content: welcomeMessages.english }
-  ]);
   const [input, setInput] = useState("");
+  const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [userLocation, setUserLocation] = useState<{lat: number, lng: number} | null>(null);
-  const [locationPermission, setLocationPermission] = useState<string>("prompt");
-  const messagesEndRef = useRef<HTMLDivElement | null>(null);
-  const [chatHistory, setChatHistory] = useState<{ role: string; content: string }[]>([]);
-  const [showLanguageSelector, setShowLanguageSelector] = useState<boolean>(true);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  const scrollToBottom = () => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+  // Auto-scroll to bottom of messages
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  // Request user location when component mounts
-  useEffect(() => {
-    if (navigator.geolocation) {
-      navigator.permissions.query({ name: 'geolocation' }).then(result => {
-        setLocationPermission(result.state);
-        
-        if (result.state === "granted") {
-          getUserLocation();
-        }
-        
-        result.onchange = function() {
-          setLocationPermission(this.state);
-          if (this.state === "granted") {
-            getUserLocation();
-          }
-        };
-      });
-    }
-  }, []);
-
-  const getUserLocation = () => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const { latitude, longitude } = position.coords;
-        setUserLocation({ lat: latitude, lng: longitude });
-        
-        // Send location to backend
-        sendLocationToBackend(latitude, longitude);
-        
-        // Add a message to inform user their location is being used
-        const locationMessage = language === "spanish" 
-          ? "He detectado tu ubicación. Usaré esta información para encontrar bancos de alimentos cercanos. ¡Pregúntame sobre bancos de alimentos en tu área!"
-          : "I've detected your location. I'll use this to find food banks nearest to you. Feel free to ask about food banks in your area!";
-        
-        setMessages(prev => [
-          ...prev, 
-          { role: "assistant", content: locationMessage }
-        ]);
-      },
-      (error) => {
-        console.error("Error getting location:", error);
-      }
-    );
-  };
-
-  const sendLocationToBackend = async (latitude: number, longitude: number) => {
-    try {
-      await fetch("http://localhost:5000/api/set-location", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ latitude, longitude }),
-      });
-    } catch (error) {
-      console.error("Error sending location to backend:", error);
-    }
-  };
-
-  const requestLocationPermission = () => {
-    if (navigator.geolocation) {
-      const requestingMessage = language === "spanish"
-        ? "Estoy solicitando acceso a tu ubicación para encontrar bancos de alimentos cercanos..."
-        : "I'm requesting access to your location to find food banks near you...";
-      
-      setMessages(prev => [
-        ...prev,
-        { role: "assistant", content: requestingMessage }
-      ]);
-      
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setUserLocation({ lat: latitude, lng: longitude });
-          sendLocationToBackend(latitude, longitude);
-          
-          const thankYouMessage = language === "spanish"
-            ? "¡Gracias! Ahora tengo tu ubicación y puedo proporcionarte recomendaciones más precisas de bancos de alimentos."
-            : "Thank you! I now have your location and can provide more accurate food bank recommendations.";
-          
-          setMessages(prev => [
-            ...prev,
-            { role: "assistant", content: thankYouMessage }
-          ]);
-        },
-        (error) => {
-          const errorMessage = language === "spanish"
-            ? "No pude acceder a tu ubicación. Aún puedes buscar bancos de alimentos mencionando tu área en tu mensaje."
-            : "I couldn't access your location. You can still search for food banks by mentioning your area in your message.";
-          
-          setMessages(prev => [
-            ...prev,
-            { role: "assistant", content: errorMessage }
-          ]);
-        }
-      );
-    }
-  };
-
-  const setUserLanguage = (selectedLanguage: string) => {
-    setLanguage(selectedLanguage);
-    setShowLanguageSelector(false);
-    
-    // Reset chat with appropriate welcome message
-    setChatHistory([]);
-    setMessages([
-      { 
-        role: "assistant", 
-        content: selectedLanguage === "spanish" ? welcomeMessages.spanish : welcomeMessages.english 
-      }
-    ]);
-  };
-
-  const handleSendMessage = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (input.trim() === "") return;
+    if (!input.trim()) return;
 
     // Add user message to chat
     const userMessage = { role: "user", content: input };
-    setMessages(prev => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
+    
+    const currentInput = input;
     setInput("");
     setIsLoading(true);
-
-    // Check for location-specific keywords to prompt for location
-    const locationKeywords = language === "english" 
-      ? ["near me", "nearby", "close", "closest", "nearest"]
-      : ["cerca", "cercano", "cercana", "próximo", "próxima"];
-    
-    if (locationKeywords.some(keyword => input.toLowerCase().includes(keyword)) && !userLocation && locationPermission !== "denied") {
-      requestLocationPermission();
-    }
 
     try {
       // Send message to backend API
@@ -175,293 +39,96 @@ export default function ChatbotPage() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          message: userLocation 
-            ? `${input} (User's coordinates: lat ${userLocation.lat}, lng ${userLocation.lng})`
-            : input,
-          history: chatHistory,
-          language: language
+          message: currentInput,
+          messages: messages,
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error(`Failed to fetch response: ${response.status}`);
       }
 
       const data = await response.json();
       
       // Add assistant response to chat
-      setMessages(prev => [...prev, { role: "assistant", content: data.message }]);
-      
-      // Update chat history for next request
-      setChatHistory(data.history);
+      setMessages((prev) => [...prev, { role: "assistant", content: data.response }]);
     } catch (error) {
       console.error("Error:", error);
-      
-      const errorMessage = language === "spanish"
-        ? "Lo siento, encontré un error al conectarme a la base de datos de bancos de alimentos. Por favor, inténtalo de nuevo en un momento."
-        : "Sorry, I encountered an error connecting to the food bank database. Please try again in a moment.";
-      
-      setMessages(prev => [...prev, { 
-        role: "assistant", 
-        content: errorMessage
-      }]);
+      setMessages((prev) => [
+        ...prev,
+        { role: "assistant", content: "Sorry, I encountered an error. Please try again." },
+      ]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Helper function to format message content with Markdown and emojis
-  const formatMessageContent = (content: string) => {
-    // Convert line breaks to <br> elements
-    return content.split('\n').map((line, index) => (
-      <React.Fragment key={index}>
-        {line}
-        <br />
-      </React.Fragment>
-    ));
-  };
-
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundColor: "#fef6e4",
-      }}
-    >
+    <div className="flex flex-col justify-between items-center min-h-screen bg-[#fef6e4]">
       <Header />
-      <main
-        style={{
-          flex: "1",
-          width: "100%",
-          maxWidth: "800px",
-          padding: "20px",
-          display: "flex",
-          flexDirection: "column"
-        }}
-      >
-        <h1 style={{ fontSize: "36px", fontWeight: "bold", color: "#2c5f2d", textAlign: "center" }}>
-          {language === "spanish" ? "Buscador de Bancos de Alimentos" : "Food Bank Finder"}
-        </h1>
-        <p style={{ fontSize: "18px", color: "#4b5563", textAlign: "center", marginBottom: "20px" }}>
-          {language === "spanish" 
-            ? "Haz preguntas y obtén recomendaciones personalizadas de bancos de alimentos." 
-            : "Ask questions and get personalized food bank recommendations."}
-        </p>
-        
-        {/* Language selector */}
-        {showLanguageSelector && (
-          <div 
-            style={{
-              backgroundColor: "#ffffff",
-              borderRadius: "12px",
-              padding: "15px",
-              marginBottom: "20px",
-              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-              textAlign: "center"
-            }}
-          >
-            <p style={{ marginBottom: "10px", fontWeight: "bold" }}>
-              Choose your preferred language / Elige tu idioma preferido:
-            </p>
-            <div style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-              <button
-                onClick={() => setUserLanguage("english")}
-                style={{
-                  padding: "10px 20px",
-                  backgroundColor: "#2c5f2d",
-                  color: "white",
-                  borderRadius: "8px",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                  fontWeight: "bold"
-                }}
-              >
-                English 🇺🇸
-              </button>
-              <button
-                onClick={() => setUserLanguage("spanish")}
-                style={{
-                  padding: "10px 20px",
-                  backgroundColor: "#2c5f2d",
-                  color: "white",
-                  borderRadius: "8px",
-                  border: "none",
-                  cursor: "pointer",
-                  fontSize: "16px",
-                  fontWeight: "bold"
-                }}
-              >
-                Español 🇪🇸
-              </button>
+      <main className="flex-1 w-full max-w-3xl px-4 py-10 flex flex-col">
+        <div className="text-center mb-5">
+          <h1 className="text-4xl font-bold text-[#2c5f2d]">
+            AI Assistant
+          </h1>
+          <p className="text-xl text-gray-600">
+            Chat with our AI to get helpful information and answers to your questions.
+          </p>
+        </div>
+
+        {/* Chat messages container */}
+        <div className="flex-1 overflow-y-auto bg-white rounded-lg p-5 mb-5 shadow-md flex flex-col gap-3 min-h-96">
+          {messages.length === 0 ? (
+            <div className="h-full flex flex-col justify-center items-center text-gray-400 text-center">
+              <p>No messages yet. Start by asking me anything!</p>
+              <p className="text-sm mt-2">
+                Example: "What are ways to eat healthier on a budget?"
+              </p>
             </div>
-          </div>
-        )}
-        
-        {/* Location button */}
-        {!userLocation && locationPermission !== "denied" && !showLanguageSelector && (
-          <button
-            onClick={requestLocationPermission}
-            style={{
-              padding: "12px 20px",
-              backgroundColor: "#2c5f2d",
-              color: "white",
-              borderRadius: "8px",
-              border: "none",
-              cursor: "pointer",
-              fontSize: "16px",
-              fontWeight: "bold",
-              marginBottom: "20px",
-              alignSelf: "center",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px"
-            }}
-          >
-            <span role="img" aria-label="location">📍</span>
-            {language === "spanish" 
-              ? "Compartir mi ubicación para mejores resultados" 
-              : "Share My Location for Better Results"}
-          </button>
-        )}
-        
-        {/* Chat message container */}
-        <div 
-          style={{
-            flex: 1,
-            backgroundColor: "#ffffff",
-            borderRadius: "12px",
-            padding: "20px",
-            marginBottom: "20px",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            overflowY: "auto",
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "400px",
-            maxHeight: "500px"
-          }}
-        >
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              style={{
-                alignSelf: message.role === "user" ? "flex-end" : "flex-start",
-                backgroundColor: message.role === "user" ? "#e9fae3" : "#f3f4f6",
-                color: "#4b5563",
-                borderRadius: "18px",
-                padding: "12px 16px",
-                maxWidth: "75%",
-                marginBottom: "12px",
-                boxShadow: "0 2px 4px rgba(0, 0, 0, 0.05)",
-                whiteSpace: "pre-wrap"
-              }}
-            >
-              {formatMessageContent(message.content)}
-            </div>
-          ))}
-          {isLoading && (
-            <div
-              style={{
-                alignSelf: "flex-start",
-                backgroundColor: "#f3f4f6",
-                color: "#4b5563",
-                borderRadius: "18px",
-                padding: "12px 16px",
-                maxWidth: "70%",
-                marginBottom: "12px",
-              }}
-            >
-              <div className="typing-indicator">
-                <span></span>
-                <span></span>
-                <span></span>
+          ) : (
+            messages.map((message, index) => (
+              <div
+                key={index}
+                className={`${
+                  message.role === "user" ? "self-end bg-[#2c5f2d] text-white" : "self-start bg-[#f59e0b] text-black"
+                } px-4 py-3 rounded-2xl max-w-[80%] break-words`}
+              >
+                {message.content}
               </div>
+            ))
+          )}
+          {isLoading && (
+            <div className="self-start bg-[#f59e0b] text-black px-4 py-3 rounded-2xl">
+              Thinking...
             </div>
           )}
           <div ref={messagesEndRef} />
         </div>
-        
+
         {/* Input form */}
-        <form onSubmit={handleSendMessage} style={{ width: "100%" }}>
-          <div style={{ 
-            display: "flex", 
-            width: "100%", 
-            borderRadius: "25px",
-            backgroundColor: "#ffffff",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)"
-          }}>
-            <input
-              type="text"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask about food banks near you..."
-              style={{
-                flex: 1,
-                padding: "16px 20px",
-                borderRadius: "25px 0 0 25px",
-                border: "none",
-                outline: "none",
-                fontSize: "16px"
-              }}
-            />
-            <button
-              type="submit"
-              disabled={isLoading}
-              style={{
-                padding: "16px 24px",
-                backgroundColor: "#2c5f2d",
-                color: "white",
-                borderRadius: "0 25px 25px 0",
-                border: "none",
-                cursor: "pointer",
-                fontSize: "16px",
-                fontWeight: "bold"
-              }}
-            >
-              Send
-            </button>
-          </div>
+        <form
+          onSubmit={handleSubmit}
+          className="flex gap-2"
+        >
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Type your message here..."
+            className="flex-1 p-3 rounded-lg border border-gray-300 text-base"
+          />
+          <button
+            type="submit"
+            disabled={isLoading || !input.trim()}
+            className={`bg-[#2c5f2d] text-white px-6 py-3 rounded-lg border-none text-base font-medium ${
+              isLoading || !input.trim() ? "opacity-70 cursor-not-allowed" : "cursor-pointer"
+            }`}
+          >
+            Send
+          </button>
         </form>
       </main>
       <Footer />
-      
-      {/* Add this CSS for the typing indicator */}
-      <style jsx>{`
-        .typing-indicator {
-          display: flex;
-          align-items: center;
-        }
-        
-        .typing-indicator span {
-          height: 8px;
-          width: 8px;
-          margin: 0 2px;
-          background-color: #8b8b8b;
-          border-radius: 50%;
-          display: inline-block;
-          animation: bounce 1.4s infinite ease-in-out both;
-        }
-        
-        .typing-indicator span:nth-child(1) {
-          animation-delay: -0.32s;
-        }
-        
-        .typing-indicator span:nth-child(2) {
-          animation-delay: -0.16s;
-        }
-        
-        @keyframes bounce {
-          0%, 80%, 100% { 
-            transform: scale(0);
-          } 40% { 
-            transform: scale(1.0);
-          }
-        }
-      `}</style>
     </div>
   );
 }
